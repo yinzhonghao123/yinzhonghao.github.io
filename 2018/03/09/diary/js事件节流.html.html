@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
   <title>js事件节流 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。   以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。   DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。   为了解决这个问题，需要使用定时器对该函数进行节">
+  <meta name="description" content="js事件节流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js事件节流">
 <meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/09/diary/js事件节流.html.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。   以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。   DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。   为了解决这个问题，需要使用定时器对该函数进行节">
-<meta property="og:updated_time" content="2018-03-09T09:08:21.220Z">
+<meta property="og:description" content="js事件节流">
+<meta property="og:updated_time" content="2018-03-09T09:12:45.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js事件节流">
-<meta name="twitter:description" content="鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。   以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。   DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。   为了解决这个问题，需要使用定时器对该函数进行节">
+<meta name="twitter:description" content="js事件节流">
   
     <link rel="alternative" href="/atom.xml" title="未卜的博客" type="application/atom+xml">
   
@@ -269,17 +269,6 @@ window.onresize = function(){
       
       
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/js事件节流//" class="article-tag-list-link color2">js事件节流</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
