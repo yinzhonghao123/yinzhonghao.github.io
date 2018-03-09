@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/09/diary/js事件节流.html.html">
 <meta property="og:site_name" content="未卜的博客">
 <meta property="og:description" content="鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。   以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。   DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。   为了解决这个问题，需要使用定时器对该函数进行节">
-<meta property="og:updated_time" content="2018-03-09T07:49:57.652Z">
+<meta property="og:updated_time" content="2018-03-09T07:53:15.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js事件节流">
 <meta name="twitter:description" content="鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。   以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。   DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。   为了解决这个问题，需要使用定时器对该函数进行节">
@@ -228,9 +228,11 @@ var n = 1
 <p>调取节流函数</p>
 </blockquote>
 <pre>
+<code>
 window.onresize = function(){  
     throttle(resizeHandler, window); // 或throttle(resizeHandler);  
 }; 
+</code>
 </pre>
 
       
