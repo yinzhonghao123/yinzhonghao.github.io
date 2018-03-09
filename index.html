@@ -5,12 +5,12 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
   <title>未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="未卜的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yinzhonghao123.github.io/index.html">
 <meta property="og:site_name" content="未卜的博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="未卜的博客">
@@ -142,6 +142,135 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-diary/js事件节流.html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/09/diary/js事件节流.html.html">js事件节流</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/09/diary/js事件节流.html.html" class="archive-article-date">
+  	<time datetime="2018-03-09T07:42:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。</p>
+</blockquote>
+<blockquote>
+<p>以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。</p>
+</blockquote>
+<blockquote>
+<p>DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。</p>
+</blockquote>
+<blockquote>
+<p>为了解决这个问题，需要使用定时器对该函数进行节流。</p>
+</blockquote>
+<blockquote>
+<p>函数节流背后的基本思想是：某些代码不可以在没有间断的情况下连续重复执行。</p>
+</blockquote>
+<blockquote>
+<p>第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码，当第二次调用函数时，它会清除前一次的定时器并设置另一个。如果前一次的定时器已经执行过了，这个操作就没有任何意义。</p>
+</blockquote>
+<blockquote>
+<p>然而，如果前一个定时器尚未执行，其实就是将其替换成一个新的定时器。目的是只有在执行函数的请求停止了一段时间之后才执行。</p>
+</blockquote>
+<blockquote>
+<p>throttle()函数：自动地进行定时器的设置和清除。接收两个参数：要执行的函数和在哪个作用域执行。</p>
+</blockquote>
+<blockquote>
+<p>throttle()首先清除之前设置的任何定时器，定时器ID是存储在函数的tID属性中的，第一次把方法传递给throttle()函数的时候，这个属性可能并不存在。</p>
+</blockquote>
+<blockquote>
+<p>接下来，创建一个新的定时器，并将其ID存储在方法的tID属性中。如果这是第一次对这个方法调用throttle()的话，那么这段代码就会创建该属性。定时器代码使用call()来确保方法在适当的环境中执行。</p>
+</blockquote>
+<blockquote>
+<p>如果没有给出第二个参数，那么就在全局作用域内执行该方法。</p>
+</blockquote>
+<blockquote>
+<p>时间间隔设为500ms，这表示监听鼠标的mousemove、scroll，浏览器窗口的resize等事件，事件处理函数会连续调用多次，但只在最后一次触发该事件。</p>
+</blockquote>
+<blockquote>
+<p>节流函数主体</p>
+</blockquote>
+<pre><code>
+function throttle(method, context) {  
+     clearTimeout(method.tId);  
+     method.tId=setTimeout(function(){  
+         method.call(context);  
+     },500);  
+ } 
+</code></pre>
+
+<blockquote>
+<p>节流调取处理函数</p>
+</blockquote>
+<pre><code>
+var n = 1
+ function resizeHandler() {  
+     console.log(n);  
+     n++;  
+ }
+</code></pre>
+
+<blockquote>
+<p>调取节流函数</p>
+</blockquote>
+<pre>
+window.onresize = function(){  
+    throttle(resizeHandler, window); // 或throttle(resizeHandler);  
+}; 
+</pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/09/diary/js事件节流.html.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-diary/玩玩.html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">

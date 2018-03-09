@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
-  <title>Archives: 2018/3 | 未卜的博客</title>
+  <title>js事件节流 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="未卜的博客">
-<meta property="og:url" content="http://yinzhonghao123.github.io/archives/2018/03/index.html">
+  <meta name="description" content="鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。   以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。   DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。   为了解决这个问题，需要使用定时器对该函数进行节">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js事件节流">
+<meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/09/diary/js事件节流.html.html">
 <meta property="og:site_name" content="未卜的博客">
+<meta property="og:description" content="鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。   以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。   DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。   为了解决这个问题，需要使用定时器对该函数进行节">
+<meta property="og:updated_time" content="2018-03-09T07:49:57.652Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未卜的博客">
+<meta name="twitter:title" content="js事件节流">
+<meta name="twitter:description" content="鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。   以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。   DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。   为了解决这个问题，需要使用定时器对该函数进行节">
   
     <link rel="alternative" href="/atom.xml" title="未卜的博客" type="application/atom+xml">
   
@@ -141,130 +145,227 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-diary/js事件节流.html" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      js事件节流
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/09/diary/js事件节流.html.html" class="archive-article-date">
+
+        
+        <a href="/2018/03/09/diary/js事件节流.html.html" class="archive-article-date">
   	<time datetime="2018-03-09T07:42:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/diary/js事件节流.html.html">js事件节流</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。</p>
+</blockquote>
+<blockquote>
+<p>以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。</p>
+</blockquote>
+<blockquote>
+<p>DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。</p>
+</blockquote>
+<blockquote>
+<p>为了解决这个问题，需要使用定时器对该函数进行节流。</p>
+</blockquote>
+<blockquote>
+<p>函数节流背后的基本思想是：某些代码不可以在没有间断的情况下连续重复执行。</p>
+</blockquote>
+<blockquote>
+<p>第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码，当第二次调用函数时，它会清除前一次的定时器并设置另一个。如果前一次的定时器已经执行过了，这个操作就没有任何意义。</p>
+</blockquote>
+<blockquote>
+<p>然而，如果前一个定时器尚未执行，其实就是将其替换成一个新的定时器。目的是只有在执行函数的请求停止了一段时间之后才执行。</p>
+</blockquote>
+<blockquote>
+<p>throttle()函数：自动地进行定时器的设置和清除。接收两个参数：要执行的函数和在哪个作用域执行。</p>
+</blockquote>
+<blockquote>
+<p>throttle()首先清除之前设置的任何定时器，定时器ID是存储在函数的tID属性中的，第一次把方法传递给throttle()函数的时候，这个属性可能并不存在。</p>
+</blockquote>
+<blockquote>
+<p>接下来，创建一个新的定时器，并将其ID存储在方法的tID属性中。如果这是第一次对这个方法调用throttle()的话，那么这段代码就会创建该属性。定时器代码使用call()来确保方法在适当的环境中执行。</p>
+</blockquote>
+<blockquote>
+<p>如果没有给出第二个参数，那么就在全局作用域内执行该方法。</p>
+</blockquote>
+<blockquote>
+<p>时间间隔设为500ms，这表示监听鼠标的mousemove、scroll，浏览器窗口的resize等事件，事件处理函数会连续调用多次，但只在最后一次触发该事件。</p>
+</blockquote>
+<blockquote>
+<p>节流函数主体</p>
+</blockquote>
+<pre><code>
+function throttle(method, context) {  
+     clearTimeout(method.tId);  
+     method.tId=setTimeout(function(){  
+         method.call(context);  
+     },500);  
+ } 
+</code></pre>
 
-        <div class="article-info info-on-right">
-          
-          
+<blockquote>
+<p>节流调取处理函数</p>
+</blockquote>
+<pre><code>
+var n = 1
+ function resizeHandler() {  
+     console.log(n);  
+     n++;  
+ }
+</code></pre>
 
+<blockquote>
+<p>调取节流函数</p>
+</blockquote>
+<pre>
+window.onresize = function(){  
+    throttle(resizeHandler, window); // 或throttle(resizeHandler);  
+}; 
+</pre>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/donate-qr.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yinzhonghao123.github.io/2018/03/09/diary/js事件节流.html.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/09/diary/玩玩.html.html" class="archive-article-date">
-  	<time datetime="2018-03-09T06:51:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/09/diary/玩玩.html.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">玩玩</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/diary/玩玩.html.html">玩玩</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/09/测2试.html" class="archive-article-date">
-  	<time datetime="2018-03-09T06:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/测2试.html">测2试</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/09/diary/测试.html.html" class="archive-article-date">
-  	<time datetime="2018-03-09T06:23:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/diary/测试.html.html">测试</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -287,8 +388,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
