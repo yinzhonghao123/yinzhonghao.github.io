@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
   <title>js模块化 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="模块化的理解 什么是模块? 将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起 块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信   一个模块的组成 数据—&amp;gt;内部的变量 操作数据的行为—&amp;gt;内部的函数">
+  <meta name="description" content="模块化的理解 什么是模块?  将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起 块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信   一个模块的组成  数据---&amp;gt;内部的变量 操作数据的行为---&amp;gt;内部的函数    &amp;lt;!--more--&amp;gt;   模块化  编码时是按照模块一个一个编码的, 整个项目就是一个模块化的项">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js模块化">
 <meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/09/diary/js模块化.html.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="模块化的理解 什么是模块? 将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起 块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信   一个模块的组成 数据—&amp;gt;内部的变量 操作数据的行为—&amp;gt;内部的函数">
+<meta property="og:description" content="模块化的理解 什么是模块?  将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起 块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信   一个模块的组成  数据---&amp;gt;内部的变量 操作数据的行为---&amp;gt;内部的函数    &amp;lt;!--more--&amp;gt;   模块化  编码时是按照模块一个一个编码的, 整个项目就是一个模块化的项">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-03-09T10:22:13.676Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js模块化">
-<meta name="twitter:description" content="模块化的理解 什么是模块? 将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起 块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信   一个模块的组成 数据—&amp;gt;内部的变量 操作数据的行为—&amp;gt;内部的函数">
+<meta name="twitter:description" content="模块化的理解 什么是模块?  将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起 块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信   一个模块的组成  数据---&amp;gt;内部的变量 操作数据的行为---&amp;gt;内部的函数    &amp;lt;!--more--&amp;gt;   模块化  编码时是按照模块一个一个编码的, 整个项目就是一个模块化的项">
   
     <link rel="alternative" href="/atom.xml" title="未卜的博客" type="application/atom+xml">
   
@@ -72,8 +72,6 @@ var _hmt = _hmt || [];
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives">随笔</a></li>
-	        
-				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -129,8 +127,6 @@ var _hmt = _hmt || [];
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -144,14 +140,12 @@ var _hmt = _hmt || [];
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives">随笔</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+					<li style="width: 50%"><a href="/archives">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -188,105 +182,130 @@ var _hmt = _hmt || [];
       
         <ul>
 <li>模块化的理解</li>
-<li>什么是模块?<ul>
+<li>什么是模块?
+<ul>
 <li>将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起</li>
 <li>块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信</li>
 </ul>
 </li>
-<li>一个模块的组成<ul>
-<li>数据—&gt;内部的变量</li>
-<li>操作数据的行为—&gt;内部的函数</li>
+<li>一个模块的组成
+<ul>
+<li>数据---&gt;内部的变量</li>
+<li>操作数据的行为---&gt;内部的函数</li>
 </ul>
 </li>
 </ul>
-<a id="more"></a> 
+<p>&lt;!--more--&gt;</p>
 <ul>
-<li>模块化<ul>
+<li>
+<p>模块化</p>
+<ul>
 <li>编码时是按照模块一个一个编码的, 整个项目就是一个模块化的项目</li>
 </ul>
 </li>
-<li><p>模块化的进化过程</p>
+<li>
+<p>模块化的进化过程</p>
 <ul>
-<li>全局function模式 :<ul>
+<li>全局function模式 :
+<ul>
 <li>编码: 全局变量/函数</li>
 <li>问题: 污染全局命名空间, 容易引起命名冲突/数据不安全</li>
 </ul>
 </li>
-<li>namespace模式 :<ul>
+<li>namespace模式 :
+<ul>
 <li>编码: 将数据/行为封装到对象中</li>
 <li>解决: 命名冲突(减少了全局变量)</li>
 <li>问题: 数据不安全(外部可以直接修改模块内部的数据)</li>
 </ul>
 </li>
-<li>IIFE模式/增强<ul>
-<li>IIFE : 立即调用函数表达式—&gt;匿名函数自调用</li>
+<li>IIFE模式/增强
+<ul>
+<li>IIFE : 立即调用函数表达式---&gt;匿名函数自调用</li>
 <li>编码: 将数据和行为封装到一个函数内部, 通过给window添加属性来向外暴露接口</li>
-<li>引入依赖: 通过函数形参来引入依赖模块<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(function(window, module2)&#123;</span><br><span class="line">  var data = &apos;atguigu.com&apos;</span><br><span class="line">  function foo() &#123;</span><br><span class="line">     module2.xxx()</span><br><span class="line">     console.log(&apos;foo()&apos;+data)</span><br><span class="line">  &#125;</span><br><span class="line">  function bar() &#123;</span><br><span class="line">     console.log(&apos;bar()&apos;+data)</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  window.module = &#123;foo&#125;</span><br><span class="line">&#125;)(window, module2)</span><br></pre></td></tr></table></figure>
-</li>
+<li>引入依赖: 通过函数形参来引入依赖模块
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(function(window, module2)&#123;</span><br><span class="line">  var data = &apos;atguigu.com&apos;</span><br><span class="line">  function foo() &#123;</span><br><span class="line">     module2.xxx()</span><br><span class="line">     console.log(&apos;foo()&apos;+data)</span><br><span class="line">  &#125;</span><br><span class="line">  function bar() &#123;</span><br><span class="line">     console.log(&apos;bar()&apos;+data)</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  window.module = &#123;foo&#125;</span><br><span class="line">&#125;)(window, module2)</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>JS模块化规范</p>
+<li>
+<p>JS模块化规范</p>
 <ul>
-<li><p>CommonJS</p>
+<li>
+<p>CommonJS</p>
 <ul>
-<li>Node.js : 服务器端</li>
-<li>Browserify : 浏览器端    也称为js的打包工具</li>
-<li><p>基本语法:</p>
-<ul>
-<li>定义暴露模块 : exports<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exports.xxx = value</span><br><span class="line">module.exports = value</span><br></pre></td></tr></table></figure>
+<li>
+<p>Node.js : 服务器端</p>
 </li>
+<li>
+<p>Browserify : 浏览器端    也称为js的打包工具</p>
+</li>
+<li>
+<p>基本语法:</p>
+<ul>
+<li>定义暴露模块 : exports
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exports.xxx = value</span><br><span class="line">module.exports = value</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>引入模块 : require</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var module = require(&apos;模块名/模块相对路径&apos;)</span><br></pre></td></tr></table></figure>
+<p>引入模块 : require
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var module = require(&apos;模块名/模块相对路径&apos;)</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>引入模块发生在什么时候?</p>
+<li>
+<p>引入模块发生在什么时候?</p>
 <ul>
 <li>Node : 运行时, 动态同步引入</li>
-<li>Browserify : 在运行前对模块进行编译/转译/打包的处理(已经将依赖的模块包含进来了),<br>运行的是打包生成的js, 运行时不存在需要再从远程引入依赖模块</li>
+<li>Browserify : 在运行前对模块进行编译/转译/打包的处理(已经将依赖的模块包含进来了),
+运行的是打包生成的js, 运行时不存在需要再从远程引入依赖模块</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>AMD : 浏览器端</p>
+<li>
+<p>AMD : 浏览器端</p>
 <ul>
 <li>requireJS</li>
-<li>基本语法<ul>
+<li>基本语法
+<ul>
 <li>定义暴露模块: define([依赖模块名], function(){return 模块对象})</li>
-<li>引入模块: require([‘模块1’, ‘模块2’, ‘模块3’], function(m1, m2){//使用模块对象})</li>
-<li>配置:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">require.config(&#123;</span><br><span class="line">  //基本路径</span><br><span class="line">  baseUrl : &apos;js/&apos;,</span><br><span class="line">  //标识名称与路径的映射</span><br><span class="line">  paths : &#123;</span><br><span class="line">    &apos;模块1&apos; : &apos;modules/模块1&apos;,</span><br><span class="line">    &apos;模块2&apos; : &apos;modules/模块2&apos;,</span><br><span class="line">    &apos;angular&apos; : &apos;libs/angular&apos;,</span><br><span class="line">    &apos;angular-messages&apos; : &apos;libs/angular-messages&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  //非AMD的模块</span><br><span class="line">  shim : &#123;</span><br><span class="line">    &apos;angular&apos; : &#123;</span><br><span class="line">        exports : &apos;angular&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    &apos;angular-messages&apos; : &#123;</span><br><span class="line">        exports : &apos;angular-messages&apos;,</span><br><span class="line">        deps : [&apos;angular&apos;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
+<li>引入模块: require(['模块1', '模块2', '模块3'], function(m1, m2){//使用模块对象})</li>
+<li>配置:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">require.config(&#123;</span><br><span class="line">  //基本路径</span><br><span class="line">  baseUrl : &apos;js/&apos;,</span><br><span class="line">  //标识名称与路径的映射</span><br><span class="line">  paths : &#123;</span><br><span class="line">    &apos;模块1&apos; : &apos;modules/模块1&apos;,</span><br><span class="line">    &apos;模块2&apos; : &apos;modules/模块2&apos;,</span><br><span class="line">    &apos;angular&apos; : &apos;libs/angular&apos;,</span><br><span class="line">    &apos;angular-messages&apos; : &apos;libs/angular-messages&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  //非AMD的模块</span><br><span class="line">  shim : &#123;</span><br><span class="line">    &apos;angular&apos; : &#123;</span><br><span class="line">        exports : &apos;angular&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    &apos;angular-messages&apos; : &#123;</span><br><span class="line">        exports : &apos;angular-messages&apos;,</span><br><span class="line">        deps : [&apos;angular&apos;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>CMD : 浏览器端</p>
+<li>
+<p>CMD : 浏览器端</p>
 <ul>
 <li>seaJS</li>
-<li><p>基本语法</p>
+<li>基本语法
 <ul>
-<li><p>定义暴露模块:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">define(function(require, module, exports)&#123;</span><br><span class="line">  通过require引入依赖模块</span><br><span class="line">  通过module/exports来暴露模块</span><br><span class="line">  exports.xxx = value</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<li>
+<p>定义暴露模块:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">define(function(require, module, exports)&#123;</span><br><span class="line">  通过require引入依赖模块</span><br><span class="line">  通过module/exports来暴露模块</span><br><span class="line">  exports.xxx = value</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>使用模块seajs.use([‘模块1’, ‘模块2’])</p>
+<li>
+<p>使用模块seajs.use(['模块1', '模块2'])</p>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>ES6</p>
+<li>
+<p>ES6</p>
 <ul>
 <li>ES6内置了模块化的实现</li>
-<li><p>基本语法</p>
+<li>基本语法
 <ul>
-<li><p>定义暴露模块 : export</p>
+<li>定义暴露模块 : export
 <ul>
-<li><p>暴露一个对象:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export default 对象</span><br></pre></td></tr></table></figure>
+<li>
+<p>暴露一个对象:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export default 对象</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>暴露多个:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export var xxx = value1</span><br><span class="line">export let yyy = value2</span><br><span class="line"> </span><br><span class="line">var xxx = value1</span><br><span class="line">let yyy = value2</span><br><span class="line">export &#123;xxx, yyy&#125;</span><br></pre></td></tr></table></figure>
+<li>
+<p>暴露多个:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export var xxx = value1</span><br><span class="line">export let yyy = value2</span><br><span class="line"> </span><br><span class="line">var xxx = value1</span><br><span class="line">let yyy = value2</span><br><span class="line">export &#123;xxx, yyy&#125;</span><br></pre></td></tr></table></figure></p>
 </li>
 </ul>
 </li>
@@ -309,6 +328,7 @@ var _hmt = _hmt || [];
     * 使用Babel将ES6---&gt;ES5(使用了CommonJS) ----浏览器还不能直接支行
     * 使用Browserify---&gt;打包处理----浏览器可以运行
 </code></pre>
+
       
 
       
