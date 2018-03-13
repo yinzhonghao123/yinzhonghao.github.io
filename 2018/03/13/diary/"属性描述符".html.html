@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
-  <title>Archives | 未卜的博客</title>
+  <title>属性描述符 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="未卜的博客">
-<meta property="og:url" content="http://yinzhonghao123.github.io/archives/index.html">
+  <meta name="description" content="###对象属性的扩展    使用.的形式动态添加（不可指定属性描述符）    使用Object.defineProperty的形式来添加（可以指定属性描述符）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="属性描述符">
+<meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/13/diary/"属性描述符".html.html">
 <meta property="og:site_name" content="未卜的博客">
+<meta property="og:description" content="###对象属性的扩展    使用.的形式动态添加（不可指定属性描述符）    使用Object.defineProperty的形式来添加（可以指定属性描述符）">
+<meta property="og:updated_time" content="2018-03-13T01:58:15.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未卜的博客">
+<meta name="twitter:title" content="属性描述符">
+<meta name="twitter:description" content="###对象属性的扩展    使用.的形式动态添加（不可指定属性描述符）    使用Object.defineProperty的形式来添加（可以指定属性描述符）">
   
     <link rel="alternative" href="/atom.xml" title="未卜的博客" type="application/atom+xml">
   
@@ -145,193 +149,206 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-diary/&#34;属性描述符&#34;.html" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      属性描述符
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/13/diary/"属性描述符".html.html" class="archive-article-date">
+
+        
+        <a href="/2018/03/13/diary/"属性描述符".html.html" class="archive-article-date">
   	<time datetime="2018-03-13T01:57:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/13/diary/"属性描述符".html.html">属性描述符</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###对象属性的扩展<br>    使用.的形式动态添加（不可指定属性描述符）<br>    使用Object.defineProperty的形式来添加（可以指定属性描述符）<br><a id="more"></a> </p>
+<p>###获取对象属性的描述符<br>    Object.getOwnPropertyDescriptor(obj,”name”);</p>
+<p>###属性描述符<br>    writable：属性值的修改的权限<br>        true：属性值是可以修改的<br>        false：属性值是不可以修改的<br>                默认情况下静默失败<br>                严格模式下报错</p>
+<pre><code>configable：属性的重定义与删除权限
+    true：属性是可以重新定义和删除的
+    false：属性是不可以重新定义和删除的
+            默认情况和严格模式下都会报错
+            false情况下writable由true转成false是合理的,不会报错
 
-        <div class="article-info info-on-right">
-          
-          
+emumerable：属性的枚举权限(能不能出现在for in循环中)
+    true：属性是可以重新定义和删除的
+    false：属性是不可以重新定义和删除的
+            默认情况和严格模式下都会报错
+</code></pre><p>###set&amp;get<br>    get 方法控制着属性的读取操作<br>    set 方法控制着属性的赋值操作</p>
+<pre><code>拥有get或set方法，或两者都有的属性，我们称之为访问描述符（与数据描述符相对应）
+访问描述符与writable是会冲突的
+</code></pre><p>###不变性<br>    常量属性<br>        将属性的writable和configurable设置为false<br>    禁止属性的扩展<br>        Object.preventExtensions(obj);<br>    密封<br>        Object.seal(obj)<br>        在禁止对象扩展的基础上把现有属性的configurable都调整为false<br>    冻结<br>        Object.freeze(obj)<br>        在密封对象的基础上把现有属性的writable都调整为false<br>    注意<br>        js所有的方法都只会影响对象的直接属性</p>
+<p>###判断枚举（不会遍历原型链）<br>    obj.propertyIsEnumerable(“a”)</p>
+<p>###获取对象所有的可枚举属性（不会遍历原型链）<br>    Object.keys(obj)</p>
+<p>###获取对象所有的属性（不会遍历原型链）<br>    obj.getOwnPropertyNames(“a”)</p>
+<p>###存在性检查<br>    (会遍历原型链)in操作符<br>    (不会遍历原型链，只在对象中查找)obj.hasOwnProperty(“a);</p>
+<p>###属性的查找<br>    1.在对象中查找是否具有相同名称的属性，如果找到，就会返回这个属性的值。<br>    2.如果没有找到，则遍历原型链<br>    3.无论·如何都没找到，返回undefined</p>
+<p>###属性的设置<br>    1.如果属性直接存在于对象中　不在原型链上<br>        找到直接存在于对象中的属性<br>        -数据描述符(没有setter/getter)<br>            直接修改对象中的属性(注意writbale的值)<br>        -访问描述符<br>            直接调用set方法</p>
+<pre><code>2.如果属性不直接存在于对象中也不在原型链上
+    在对象的直接属性中添加一个属性（数据描述符）   
+    value:&quot;a&quot;
+    writable:true
+    configurable:true
+    enumerable:true
 
+3.如果属性不直接存在于对象中  在原型链上
+    ①.该属性是数据描述符(没有setter/getter)
+        -writbale为true
+    直接在对象中添加一个属性，我们称之为屏蔽属性
+        -writbale为false
+        报错，不会生成屏蔽属性
+
+    ②.该属性是访问描述符
+        调用set，不会生成屏蔽属性
+
+
+4.如果属性直接存在于对象中  也在原型链上
+    找到直接存在于对象中的属性
+    -数据描述符(没有setter/getter)
+        直接修改对象中的属性(注意writbale的值)
+    -访问描述符
+        直接调用set方法
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" style="width: 170px;height: 170px" src="/img/zsm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yinzhonghao123.github.io/2018/03/13/diary/"属性描述符".html.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/13/diary/"浏览器兼容性".html.html" class="archive-article-date">
-  	<time datetime="2018-03-13T01:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/13/diary/"浏览器兼容性".html.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浏览器兼容性</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/13/diary/"浏览器兼容性".html.html">浏览器兼容性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/09/diary/js模块化.html.html" class="archive-article-date">
-  	<time datetime="2018-03-09T10:15:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/diary/js模块化.html.html">js模块化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/09/diary/css3 变量.html.html" class="archive-article-date">
-  	<time datetime="2018-03-09T08:50:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/diary/css3 变量.html.html">css3 变量</a>
-    </h1>
+
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/css//" class="article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/09/diary/解决Vue方法中setTimeout改变变量的值无效.html.html" class="archive-article-date">
-  	<time datetime="2018-03-09T08:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/diary/解决Vue方法中setTimeout改变变量的值无效.html.html">解决Vue方法中setTimeout改变变量的值无效</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -355,8 +372,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

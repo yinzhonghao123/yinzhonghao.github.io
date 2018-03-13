@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
   <title>浏览器兼容性 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###兼容性问题">
+  <meta name="description" content="1.event事件对象兼容     event=event||window.event  2.event.x与event.y问题     问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；             Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。     解决方法：var myX = event.x ? event.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浏览器兼容性">
 <meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/13/diary/"浏览器兼容性".html.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="###兼容性问题">
-<meta property="og:updated_time" content="2018-03-13T01:55:18.549Z">
+<meta property="og:description" content="1.event事件对象兼容     event=event||window.event  2.event.x与event.y问题     问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；             Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。     解决方法：var myX = event.x ? event.">
+<meta property="og:updated_time" content="2018-03-13T01:56:29.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器兼容性">
-<meta name="twitter:description" content="###兼容性问题">
+<meta name="twitter:description" content="1.event事件对象兼容     event=event||window.event  2.event.x与event.y问题     问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；             Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。     解决方法：var myX = event.x ? event.">
   
     <link rel="alternative" href="/atom.xml" title="未卜的博客" type="application/atom+xml">
   
@@ -169,7 +169,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###兼容性问题<br><a id="more"></a> </p>
+        <a id="more"></a> 
 <pre><code>1.event事件对象兼容
     event=event||window.event
 
@@ -346,6 +346,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/03/13/diary/"属性描述符".html.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          属性描述符
+        
+      </div>
+    </a>
   
   
     <a href="/2018/03/09/diary/js模块化.html.html" id="article-nav-older" class="article-nav-link-wrap">
