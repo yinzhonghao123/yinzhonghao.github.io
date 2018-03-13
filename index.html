@@ -147,6 +147,179 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-diary/&#34;BFC&#34;.html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/13/diary/"BFC".html.html">BFC</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/13/diary/"BFC".html.html" class="archive-article-date">
+  	<time datetime="2018-03-13T02:15:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="在解释-BFC-是什么之前，需要先介绍-Box、Formatting-Context的概念。"><a href="#在解释-BFC-是什么之前，需要先介绍-Box、Formatting-Context的概念。" class="headerlink" title="在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。"></a>在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。</h3><pre><code>Box: CSS布局的基本单位
+    Box 是 CSS 布局的对象和基本单位， 直观点来说，就是一个页面是由很多个 Box 组成的。
+    元素的类型和 display 属性，决定了这个 Box 的类型。 不同类型的 Box， 会参与不同的 Formatting Context（一个决定如何渲染文档的容器），
+    因此Box内的元素会以不同的方式渲染。让我们看看有哪些盒子：
+        block-level box:
+            display 属性为 block, list-item, table 的元素，会生成 block-level box。并且参与 block fomatting context；
+        inline-level box:
+            display 属性为 inline, inline-block, inline-table 的元素，会生成 inline-level box。
+            并且参与 inline formatting context
+
+Formatting context 　　
+        Formatting context 是 W3C CSS2.1 规范中的一个概念。
+        它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
+        最常见的 Formatting context 有 Block fomatting context (简称BFC)
+                                    Inline formatting context (简称IFC)。
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/03/13/diary/"BFC".html.html#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/css//" class="article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/13/diary/"BFC".html.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-diary/&#34;haslayout&#34;.html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/13/diary/"haslayout".html.html">haslayout</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/13/diary/"haslayout".html.html" class="archive-article-date">
+  	<time datetime="2018-03-13T02:14:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是haslayout"><a href="#什么是haslayout" class="headerlink" title="什么是haslayout"></a>什么是haslayout</h3><pre><code>layout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算，
+以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。
+而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。
+
+必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性，
+因此haslayout属性只针对IE6和IE7。
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/03/13/diary/"haslayout".html.html#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/css//" class="article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/13/diary/"haslayout".html.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-diary/&#34;重绘&amp;重排&#34;.html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
