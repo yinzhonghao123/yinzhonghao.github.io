@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
-  <title>js事件节流 | 未卜的博客</title>
+  <title>解决Vue方法中setTimeout改变变量的值无效 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js事件节流">
+  <meta name="description" content="解决Vue方法中setTimeout改变变量的值无效">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js事件节流">
-<meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/09/diary/js事件节流.html.html">
+<meta property="og:title" content="解决Vue方法中setTimeout改变变量的值无效">
+<meta property="og:url" content="http://yinzhonghao123.github.io/diary/解决Vue方法中setTimeout改变变量的值无效.html.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="js事件节流">
-<meta property="og:updated_time" content="2018-03-09T10:22:13.674Z">
+<meta property="og:description" content="解决Vue方法中setTimeout改变变量的值无效">
+<meta property="og:updated_time" content="2018-03-09T10:22:13.672Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js事件节流">
-<meta name="twitter:description" content="js事件节流">
+<meta name="twitter:title" content="解决Vue方法中setTimeout改变变量的值无效">
+<meta name="twitter:description" content="解决Vue方法中setTimeout改变变量的值无效">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -157,14 +157,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-diary/js事件节流.html" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-diary/解决Vue方法中setTimeout改变变量的值无效.html" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      js事件节流
+      解决Vue方法中setTimeout改变变量的值无效
     </h1>
   
 
@@ -174,8 +174,8 @@ var _hmt = _hmt || [];
 		    </span>
         
         
-        <a href="/2018/03/09/diary/js事件节流.html.html" class="archive-article-date">
-  	<time datetime="2018-03-09T07:42:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
+        <a href="/diary/解决Vue方法中setTimeout改变变量的值无效.html.html" class="archive-article-date">
+  	<time datetime="2018-03-09T08:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
 </a>
         
       </header>
@@ -183,75 +183,8 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。</p>
+<p>把data里的变量继承过来重新封装一下<br>    <pre><br>        <code><br>        let that = this;<br>          this.rightAnswer = false;<br>          setTimeout(function() {<br>                that.rightAnswer = true;<br>          }, 1500)<br>          </code><br>    </pre></p>
 </blockquote>
-<blockquote>
-<p>以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。</p>
-</blockquote>
-<blockquote>
-<p>DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。</p>
-</blockquote>
-<blockquote>
-<p>为了解决这个问题，需要使用定时器对该函数进行节流。</p>
-</blockquote>
-<a id="more"></a> 
-<blockquote>
-<p>函数节流背后的基本思想是：某些代码不可以在没有间断的情况下连续重复执行。</p>
-</blockquote>
-<blockquote>
-<p>第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码，当第二次调用函数时，它会清除前一次的定时器并设置另一个。如果前一次的定时器已经执行过了，这个操作就没有任何意义。</p>
-</blockquote>
-<blockquote>
-<p>然而，如果前一个定时器尚未执行，其实就是将其替换成一个新的定时器。目的是只有在执行函数的请求停止了一段时间之后才执行。</p>
-</blockquote>
-<blockquote>
-<p>throttle()函数：自动地进行定时器的设置和清除。接收两个参数：要执行的函数和在哪个作用域执行。</p>
-</blockquote>
-<blockquote>
-<p>throttle()首先清除之前设置的任何定时器，定时器ID是存储在函数的tID属性中的，第一次把方法传递给throttle()函数的时候，这个属性可能并不存在。</p>
-</blockquote>
-<blockquote>
-<p>接下来，创建一个新的定时器，并将其ID存储在方法的tID属性中。如果这是第一次对这个方法调用throttle()的话，那么这段代码就会创建该属性。定时器代码使用call()来确保方法在适当的环境中执行。</p>
-</blockquote>
-<blockquote>
-<p>如果没有给出第二个参数，那么就在全局作用域内执行该方法。</p>
-</blockquote>
-<blockquote>
-<p>时间间隔设为500ms，这表示监听鼠标的mousemove、scroll，浏览器窗口的resize等事件，事件处理函数会连续调用多次，但只在最后一次触发该事件。</p>
-</blockquote>
-<blockquote>
-<p>节流函数主体</p>
-</blockquote>
-<pre><code>
-function throttle(method, context) {  
-     clearTimeout(method.tId);  
-     method.tId=setTimeout(function(){  
-         method.call(context);  
-     },500);  
- } 
-</code></pre>
-
-<blockquote>
-<p>节流调取处理函数</p>
-</blockquote>
-<pre><code>
-var n = 1
- function resizeHandler() {  
-     console.log(n);  
-     n++;  
- }
-</code></pre>
-
-<blockquote>
-<p>调取节流函数</p>
-</blockquote>
-<pre>
-<code>
-window.onresize = function(){  
-    throttle(resizeHandler, window); // 或throttle(resizeHandler);  
-}; 
-</code>
-</pre>
 
       
 
@@ -347,7 +280,7 @@ window.onresize = function(){
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yinzhonghao123.github.io/2018/03/09/diary/js事件节流.html.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yinzhonghao123.github.io/diary/解决Vue方法中setTimeout改变变量的值无效.html.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -362,18 +295,18 @@ window.onresize = function(){
   
 <nav id="article-nav">
   
-    <a href="/2018/03/09/diary/解决Vue方法中setTimeout改变变量的值无效.html.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/diary/css3 变量.html.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          解决Vue方法中setTimeout改变变量的值无效
+          css3 变量
         
       </div>
     </a>
   
   
-    <a href="/2018/03/09/diary/关于头像.html.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于头像</div>
+    <a href="/diary/js事件节流.html.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js事件节流</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -412,7 +345,7 @@ window.onresize = function(){
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yinzhonghao123.github.io/2018/03/09/diary/js事件节流.html.html",
+  id: "http://yinzhonghao123.github.io/diary/解决Vue方法中setTimeout改变变量的值无效.html.html",
   owner: 'yinzhonghao123',
   repo: 'yinzhonghao123.github.io',
   oauth: {
