@@ -459,22 +459,27 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+
+
+
+<!-- Gitment评论插件通用代码 -->
+<div id="git"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-var gitment = new Gitment({
-  id: "http://yinzhonghao123.github.io/diary/js模块化.html.html",
-  owner: 'yinzhonghao123',
-  repo: 'yinzhonghao123.github.io',
-  oauth: {
-    client_id: 'cde34ce9ec780262219a',
-    client_secret: '2de52fe3a31c1e0ef1edca6d20d61f7e88b0825e',
-  },
-})
-gitment.render('gitment-ctn')
+  var gitment = new Gitment({
+    owner: "yinzhonghao123",//github用户名
+    repo: "yinzhonghao123.github.io",//用户存储评论的github项目名称
+    oauth: {
+      client_id: "cde34ce9ec780262219a",//注册OAuth Application时生产的ClinetID
+      client_secret:"2de52fe3a31c1e0ef1edca6d20d61f7e88b0825e",//注册OAuth Application时生成的Client Secret
+    },
+  })
+  gitment.render('git')
 </script>
-  
+<!-- Gitment代码结束 -->
+
 
 
 
