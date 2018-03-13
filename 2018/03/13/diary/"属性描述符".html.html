@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/13/diary/"属性描述符".html.html">
 <meta property="og:site_name" content="未卜的博客">
 <meta property="og:description" content="###对象属性的扩展    使用.的形式动态添加（不可指定属性描述符）    使用Object.defineProperty的形式来添加（可以指定属性描述符）">
-<meta property="og:updated_time" content="2018-03-13T01:58:15.320Z">
+<meta property="og:updated_time" content="2018-03-13T02:00:45.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="属性描述符">
 <meta name="twitter:description" content="###对象属性的扩展    使用.的形式动态添加（不可指定属性描述符）    使用Object.defineProperty的形式来添加（可以指定属性描述符）">
@@ -169,9 +169,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###对象属性的扩展<br>    使用.的形式动态添加（不可指定属性描述符）<br>    使用Object.defineProperty的形式来添加（可以指定属性描述符）<br><a id="more"></a> </p>
-<p>###获取对象属性的描述符<br>    Object.getOwnPropertyDescriptor(obj,”name”);</p>
-<p>###属性描述符<br>    writable：属性值的修改的权限<br>        true：属性值是可以修改的<br>        false：属性值是不可以修改的<br>                默认情况下静默失败<br>                严格模式下报错</p>
+        <p>   ###对象属性的扩展<br>    使用.的形式动态添加（不可指定属性描述符）<br>    使用Object.defineProperty的形式来添加（可以指定属性描述符）<br><a id="more"></a> </p>
+<p>   ###获取对象属性的描述符<br>    Object.getOwnPropertyDescriptor(obj,”name”);</p>
+<p>   ###属性描述符<br>    writable：属性值的修改的权限<br>        true：属性值是可以修改的<br>        false：属性值是不可以修改的<br>                默认情况下静默失败<br>                严格模式下报错</p>
 <pre><code>configable：属性的重定义与删除权限
     true：属性是可以重新定义和删除的
     false：属性是不可以重新定义和删除的
@@ -182,16 +182,16 @@ emumerable：属性的枚举权限(能不能出现在for in循环中)
     true：属性是可以重新定义和删除的
     false：属性是不可以重新定义和删除的
             默认情况和严格模式下都会报错
-</code></pre><p>###set&amp;get<br>    get 方法控制着属性的读取操作<br>    set 方法控制着属性的赋值操作</p>
+</code></pre><p>   ###set&amp;get<br>    get 方法控制着属性的读取操作<br>    set 方法控制着属性的赋值操作</p>
 <pre><code>拥有get或set方法，或两者都有的属性，我们称之为访问描述符（与数据描述符相对应）
 访问描述符与writable是会冲突的
-</code></pre><p>###不变性<br>    常量属性<br>        将属性的writable和configurable设置为false<br>    禁止属性的扩展<br>        Object.preventExtensions(obj);<br>    密封<br>        Object.seal(obj)<br>        在禁止对象扩展的基础上把现有属性的configurable都调整为false<br>    冻结<br>        Object.freeze(obj)<br>        在密封对象的基础上把现有属性的writable都调整为false<br>    注意<br>        js所有的方法都只会影响对象的直接属性</p>
-<p>###判断枚举（不会遍历原型链）<br>    obj.propertyIsEnumerable(“a”)</p>
-<p>###获取对象所有的可枚举属性（不会遍历原型链）<br>    Object.keys(obj)</p>
-<p>###获取对象所有的属性（不会遍历原型链）<br>    obj.getOwnPropertyNames(“a”)</p>
-<p>###存在性检查<br>    (会遍历原型链)in操作符<br>    (不会遍历原型链，只在对象中查找)obj.hasOwnProperty(“a);</p>
-<p>###属性的查找<br>    1.在对象中查找是否具有相同名称的属性，如果找到，就会返回这个属性的值。<br>    2.如果没有找到，则遍历原型链<br>    3.无论·如何都没找到，返回undefined</p>
-<p>###属性的设置<br>    1.如果属性直接存在于对象中　不在原型链上<br>        找到直接存在于对象中的属性<br>        -数据描述符(没有setter/getter)<br>            直接修改对象中的属性(注意writbale的值)<br>        -访问描述符<br>            直接调用set方法</p>
+</code></pre><p>   ###不变性<br>    常量属性<br>        将属性的writable和configurable设置为false<br>    禁止属性的扩展<br>        Object.preventExtensions(obj);<br>    密封<br>        Object.seal(obj)<br>        在禁止对象扩展的基础上把现有属性的configurable都调整为false<br>    冻结<br>        Object.freeze(obj)<br>        在密封对象的基础上把现有属性的writable都调整为false<br>    注意<br>        js所有的方法都只会影响对象的直接属性</p>
+<p>   ###判断枚举（不会遍历原型链）<br>    obj.propertyIsEnumerable(“a”)</p>
+<p>   ###获取对象所有的可枚举属性（不会遍历原型链）<br>    Object.keys(obj)</p>
+<p>   ###获取对象所有的属性（不会遍历原型链）<br>    obj.getOwnPropertyNames(“a”)</p>
+<p>   ###存在性检查<br>    (会遍历原型链)in操作符<br>    (不会遍历原型链，只在对象中查找)obj.hasOwnProperty(“a);</p>
+<p>   ###属性的查找<br>    1.在对象中查找是否具有相同名称的属性，如果找到，就会返回这个属性的值。<br>    2.如果没有找到，则遍历原型链<br>    3.无论·如何都没找到，返回undefined</p>
+<p>   ###属性的设置<br>    1.如果属性直接存在于对象中　不在原型链上<br>        找到直接存在于对象中的属性<br>        -数据描述符(没有setter/getter)<br>            直接修改对象中的属性(注意writbale的值)<br>        -访问描述符<br>            直接调用set方法</p>
 <pre><code>2.如果属性不直接存在于对象中也不在原型链上
     在对象的直接属性中添加一个属性（数据描述符）   
     value:&quot;a&quot;
@@ -251,6 +251,17 @@ emumerable：属性的枚举权限(能不能出现在for in循环中)
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
