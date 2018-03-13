@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
   <title>浏览器兼容性 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.event事件对象兼容         event=event||window.event  &amp;lt;!--more--&amp;gt;     2.event.x与event.y问题         问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；                 Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。">
+  <meta name="description" content="1.event事件对象兼容     event=event||window.event">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浏览器兼容性">
 <meta property="og:url" content="http://yinzhonghao123.github.io/2018/03/13/diary/"浏览器兼容性".html.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="1.event事件对象兼容         event=event||window.event  &amp;lt;!--more--&amp;gt;     2.event.x与event.y问题         问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；                 Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。">
+<meta property="og:description" content="1.event事件对象兼容     event=event||window.event">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-03-13T02:00:04.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器兼容性">
-<meta name="twitter:description" content="1.event事件对象兼容         event=event||window.event  &amp;lt;!--more--&amp;gt;     2.event.x与event.y问题         问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；                 Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。">
+<meta name="twitter:description" content="1.event事件对象兼容     event=event||window.event">
   
     <link rel="alternative" href="/atom.xml" title="未卜的博客" type="application/atom+xml">
   
@@ -180,87 +180,86 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>    1.event事件对象兼容
-        event=event||window.event
-</code></pre>
-<p>&lt;!--more--&gt;</p>
-<pre><code>    2.event.x与event.y问题
-        问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；
-                Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。
-        解决方法：var myX = event.x ? event.x : event.pageX;
-                var myY = event.y ? event.y:event.pageY;
-        如果考虑第8条问题，就改用myEvent代替event即可。
+        <pre><code>1.event事件对象兼容
+    event=event||window.event
+</code></pre><a id="more"></a> 
+<pre><code>2.event.x与event.y问题
+    问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；
+            Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。
+    解决方法：var myX = event.x ? event.x : event.pageX;
+            var myY = event.y ? event.y:event.pageY;
+    如果考虑第8条问题，就改用myEvent代替event即可。
 
-    3.盒模型
-        盒模型包括：content，padding，border，margin
-        ie下为怪异盒模型，他的宽度获取为content+padding+border
-        普通浏览器的width获取值为content内容区的宽度
-        可以使用box-sizing
-            有两个值一个是content-box，另一个是border-box。
-            当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；
-            当设置为box-sizing:border-box时，将采用怪异模式解析计算；
-            目前使用此属性需要前缀如下:
-                -webkit-box-sizing: content-box;
-                -moz-box-sizing: content-box;
+3.盒模型
+    盒模型包括：content，padding，border，margin
+    ie下为怪异盒模型，他的宽度获取为content+padding+border
+    普通浏览器的width获取值为content内容区的宽度
+    可以使用box-sizing
+        有两个值一个是content-box，另一个是border-box。
+        当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；
+        当设置为box-sizing:border-box时，将采用怪异模式解析计算；
+        目前使用此属性需要前缀如下:
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
 
-    4.input属性placeholder
-        IE8下不支持HTML5属性placeholder,可以使用插件进行解决
+4.input属性placeholder
+    IE8下不支持HTML5属性placeholder,可以使用插件进行解决
 
-    5.setAttribute('style','color:red;')
-        FIREFOX支持(除了IE，现在所有浏览器都支持)，IE不支持
-        解决办法：不用setAttribute('style','color:red')
-            而用object.style.cssText = ‘color:red;'(这写法也有例外)
-            最好的办法是上面种方法都用上，万无一失        
+5.setAttribute(&apos;style&apos;,&apos;color:red;&apos;)
+    FIREFOX支持(除了IE，现在所有浏览器都支持)，IE不支持
+    解决办法：不用setAttribute(&apos;style&apos;,&apos;color:red&apos;)
+        而用object.style.cssText = ‘color:red;&apos;(这写法也有例外)
+        最好的办法是上面种方法都用上，万无一失        
 
-    6.监听事件
-        addEventListener支持除了ie的所有浏览器
-        attachEvent支持ie的监听事件，但是他的事件必须加上on
+6.监听事件
+    addEventListener支持除了ie的所有浏览器
+    attachEvent支持ie的监听事件，但是他的事件必须加上on
 
-    7.移除事件
-            ie浏览器中datachEvent进行移除事件
-            其他浏览器中使用removeEventListener进行移除事件
+7.移除事件
+        ie浏览器中datachEvent进行移除事件
+        其他浏览器中使用removeEventListener进行移除事件
 
-    8.取消冒泡
-        取消冒泡
-            IE浏览器中使用cancelBuble=true来取消冒泡
-            普通浏览器中使用stopPropagation来禁止冒泡
+8.取消冒泡
+    取消冒泡
+        IE浏览器中使用cancelBuble=true来取消冒泡
+        普通浏览器中使用stopPropagation来禁止冒泡
 
-    9.禁止默认行为
-        IE浏览器中使用returnValue='false'来禁止默认行为
-        普通浏览中使用preventDefault()来禁止默认行为
+9.禁止默认行为
+    IE浏览器中使用returnValue=&apos;false&apos;来禁止默认行为
+    普通浏览中使用preventDefault()来禁止默认行为
 
-        document.onclick=function(e){
-            var e=e||window.event;
-            if (e.preventDefault) {
-              e.preventDefault();//W3C标准
-            }else{
-              e.returnValue='false';//IE..
-            }
+    document.onclick=function(e){
+        var e=e||window.event;
+        if (e.preventDefault) {
+          e.preventDefault();//W3C标准
+        }else{
+          e.returnValue=&apos;false&apos;;//IE..
         }
+    }
 
-    10.关于EVENT事件中的target：
-        //关于event事件中的target
+10.关于EVENT事件中的target：
+    //关于event事件中的target
 
-            document.onmouseover=function(e){
-                var e=e||window.event;
-                var Target=e.target||e.srcElement;//获取target的兼容写法，后面的为IE
-                var from=e.relatedTarget||e.formElement;//鼠标来的地方，同样后面的为IE...
-                var to=e.relatedTarget||e.toElement;//鼠标去的地方
-            }
-    11.鼠标滚轮滚动事件：
-            //鼠标滚轮事件
-            //火狐中的滚轮事件
-            document.addEventListener(&quot;DOMMouseScroll&quot;,function(event){
-                alert(event.detail);//若前滚的话为 -3，后滚的话为 3
-            },false)
-            //非火狐中的滚轮事件
-            document.onmousewheel=function(event){
-                alert(event.detail);//前滚：120，后滚：-120
-            }
-    12.ajax对象
-            IE浏览器中使用ActiveXObject创建ajax对象
-            普通浏览器中使用XmlHttprequest创建ajax对象</code></pre>
-
+        document.onmouseover=function(e){
+            var e=e||window.event;
+            var Target=e.target||e.srcElement;//获取target的兼容写法，后面的为IE
+            var from=e.relatedTarget||e.formElement;//鼠标来的地方，同样后面的为IE...
+            var to=e.relatedTarget||e.toElement;//鼠标去的地方
+        }
+11.鼠标滚轮滚动事件：
+        //鼠标滚轮事件
+        //火狐中的滚轮事件
+        document.addEventListener(&quot;DOMMouseScroll&quot;,function(event){
+            alert(event.detail);//若前滚的话为 -3，后滚的话为 3
+        },false)
+        //非火狐中的滚轮事件
+        document.onmousewheel=function(event){
+            alert(event.detail);//前滚：120，后滚：-120
+        }
+12.ajax对象
+        IE浏览器中使用ActiveXObject创建ajax对象
+        普通浏览器中使用XmlHttprequest创建ajax对象
+</code></pre>
       
 
       
