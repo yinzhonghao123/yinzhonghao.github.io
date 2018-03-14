@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
-  <title>浏览器兼容性 | 未卜的博客</title>
+  <title>js事件节流 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.event事件对象兼容     event=event||window.event">
+  <meta name="description" content="js事件节流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器兼容性">
-<meta property="og:url" content="http://yinzhonghao123.github.io/diary/浏览器兼容性.html">
+<meta property="og:title" content="js事件节流">
+<meta property="og:url" content="http://yinzhonghao123.github.io/js事件节流.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="1.event事件对象兼容     event=event||window.event">
-<meta property="og:updated_time" content="2018-03-13T08:02:17.208Z">
+<meta property="og:description" content="js事件节流">
+<meta property="og:updated_time" content="2018-03-14T01:36:07.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浏览器兼容性">
-<meta name="twitter:description" content="1.event事件对象兼容     event=event||window.event">
+<meta name="twitter:title" content="js事件节流">
+<meta name="twitter:description" content="js事件节流">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -157,14 +157,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-diary/浏览器兼容性.html" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js事件节流.html" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      浏览器兼容性
+      js事件节流
     </h1>
   
 
@@ -174,94 +174,85 @@ var _hmt = _hmt || [];
 		    </span>
         
         
-        <a href="/diary/浏览器兼容性.html" class="archive-article-date">
-  	<time datetime="2018-03-13T01:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+        <a href="/js事件节流.html" class="archive-article-date">
+  	<time datetime="2018-03-09T07:42:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>1.event事件对象兼容
-    event=event||window.event
-</code></pre><a id="more"></a> 
-<pre><code>2.event.x与event.y问题
-    问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；
-            Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。
-    解决方法：var myX = event.x ? event.x : event.pageX;
-            var myY = event.y ? event.y:event.pageY;
-    如果考虑第8条问题，就改用myEvent代替event即可。
-
-3.盒模型
-    盒模型包括：content，padding，border，margin
-    ie下为怪异盒模型，他的宽度获取为content+padding+border
-    普通浏览器的width获取值为content内容区的宽度
-    可以使用box-sizing
-        有两个值一个是content-box，另一个是border-box。
-        当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；
-        当设置为box-sizing:border-box时，将采用怪异模式解析计算；
-        目前使用此属性需要前缀如下:
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-
-4.input属性placeholder
-    IE8下不支持HTML5属性placeholder,可以使用插件进行解决
-
-5.setAttribute(&apos;style&apos;,&apos;color:red;&apos;)
-    FIREFOX支持(除了IE，现在所有浏览器都支持)，IE不支持
-    解决办法：不用setAttribute(&apos;style&apos;,&apos;color:red&apos;)
-        而用object.style.cssText = ‘color:red;&apos;(这写法也有例外)
-        最好的办法是上面种方法都用上，万无一失        
-
-6.监听事件
-    addEventListener支持除了ie的所有浏览器
-    attachEvent支持ie的监听事件，但是他的事件必须加上on
-
-7.移除事件
-        ie浏览器中datachEvent进行移除事件
-        其他浏览器中使用removeEventListener进行移除事件
-
-8.取消冒泡
-    取消冒泡
-        IE浏览器中使用cancelBuble=true来取消冒泡
-        普通浏览器中使用stopPropagation来禁止冒泡
-
-9.禁止默认行为
-    IE浏览器中使用returnValue=&apos;false&apos;来禁止默认行为
-    普通浏览中使用preventDefault()来禁止默认行为
-
-    document.onclick=function(e){
-        var e=e||window.event;
-        if (e.preventDefault) {
-          e.preventDefault();//W3C标准
-        }else{
-          e.returnValue=&apos;false&apos;;//IE..
-        }
-    }
-
-10.关于EVENT事件中的target：
-    //关于event事件中的target
-
-        document.onmouseover=function(e){
-            var e=e||window.event;
-            var Target=e.target||e.srcElement;//获取target的兼容写法，后面的为IE
-            var from=e.relatedTarget||e.formElement;//鼠标来的地方，同样后面的为IE...
-            var to=e.relatedTarget||e.toElement;//鼠标去的地方
-        }
-11.鼠标滚轮滚动事件：
-        //鼠标滚轮事件
-        //火狐中的滚轮事件
-        document.addEventListener(&quot;DOMMouseScroll&quot;,function(event){
-            alert(event.detail);//若前滚的话为 -3，后滚的话为 3
-        },false)
-        //非火狐中的滚轮事件
-        document.onmousewheel=function(event){
-            alert(event.detail);//前滚：120，后滚：-120
-        }
-12.ajax对象
-        IE浏览器中使用ActiveXObject创建ajax对象
-        普通浏览器中使用XmlHttprequest创建ajax对象
+        <blockquote>
+<p>鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。</p>
+</blockquote>
+<blockquote>
+<p>以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。</p>
+</blockquote>
+<blockquote>
+<p>DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。</p>
+</blockquote>
+<blockquote>
+<p>为了解决这个问题，需要使用定时器对该函数进行节流。</p>
+</blockquote>
+<a id="more"></a> 
+<blockquote>
+<p>函数节流背后的基本思想是：某些代码不可以在没有间断的情况下连续重复执行。</p>
+</blockquote>
+<blockquote>
+<p>第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码，当第二次调用函数时，它会清除前一次的定时器并设置另一个。如果前一次的定时器已经执行过了，这个操作就没有任何意义。</p>
+</blockquote>
+<blockquote>
+<p>然而，如果前一个定时器尚未执行，其实就是将其替换成一个新的定时器。目的是只有在执行函数的请求停止了一段时间之后才执行。</p>
+</blockquote>
+<blockquote>
+<p>throttle()函数：自动地进行定时器的设置和清除。接收两个参数：要执行的函数和在哪个作用域执行。</p>
+</blockquote>
+<blockquote>
+<p>throttle()首先清除之前设置的任何定时器，定时器ID是存储在函数的tID属性中的，第一次把方法传递给throttle()函数的时候，这个属性可能并不存在。</p>
+</blockquote>
+<blockquote>
+<p>接下来，创建一个新的定时器，并将其ID存储在方法的tID属性中。如果这是第一次对这个方法调用throttle()的话，那么这段代码就会创建该属性。定时器代码使用call()来确保方法在适当的环境中执行。</p>
+</blockquote>
+<blockquote>
+<p>如果没有给出第二个参数，那么就在全局作用域内执行该方法。</p>
+</blockquote>
+<blockquote>
+<p>时间间隔设为500ms，这表示监听鼠标的mousemove、scroll，浏览器窗口的resize等事件，事件处理函数会连续调用多次，但只在最后一次触发该事件。</p>
+</blockquote>
+<blockquote>
+<p>节流函数主体</p>
+</blockquote>
+<pre><code>
+function throttle(method, context) {  
+     clearTimeout(method.tId);  
+     method.tId=setTimeout(function(){  
+         method.call(context);  
+     },500);  
+ } 
 </code></pre>
+
+<blockquote>
+<p>节流调取处理函数</p>
+</blockquote>
+<pre><code>
+var n = 1
+ function resizeHandler() {  
+     console.log(n);  
+     n++;  
+ }
+</code></pre>
+
+<blockquote>
+<p>调取节流函数</p>
+</blockquote>
+<pre>
+<code>
+window.onresize = function(){  
+    throttle(resizeHandler, window); // 或throttle(resizeHandler);  
+}; 
+</code>
+</pre>
+
       
 
       
@@ -296,6 +287,17 @@ var _hmt = _hmt || [];
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -345,7 +347,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yinzhonghao123.github.io/diary/浏览器兼容性.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yinzhonghao123.github.io/js事件节流.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -360,18 +362,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/diary/属性描述符.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Vue中setTimeout值无效.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          属性描述符
+          Vue中setTimeout值无效
         
       </div>
     </a>
   
   
-    <a href="/diary/js模块化.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js模块化</div>
+    <a href="/关于头像.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于头像</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -415,7 +417,7 @@ var _hmt = _hmt || [];
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
   var gitment = new Gitment({
-    id: 'Tue Mar 13 2018 09:53:19 GMT+0800',
+    id: 'Fri Mar 09 2018 15:42:07 GMT+0800',
     owner: "yinzhonghao123",//github用户名
     repo: "yinzhonghao123.github.io",//用户存储评论的github项目名称
     oauth: {
