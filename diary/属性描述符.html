@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yinzhonghao123.github.io">
-  <title>js事件节流 | 未卜的博客</title>
+  <title>属性描述符 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js事件节流">
+  <meta name="description" content="对象属性的扩展使用.的形式动态添加（不可指定属性描述符） 使用Object.defineProperty的形式来添加（可以指定属性描述符）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js事件节流">
-<meta property="og:url" content="http://yinzhonghao123.github.io/diary/js事件节流.html.html">
+<meta property="og:title" content="属性描述符">
+<meta property="og:url" content="http://yinzhonghao123.github.io/diary/属性描述符.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="js事件节流">
-<meta property="og:updated_time" content="2018-03-09T10:22:13.674Z">
+<meta property="og:description" content="对象属性的扩展使用.的形式动态添加（不可指定属性描述符） 使用Object.defineProperty的形式来添加（可以指定属性描述符）">
+<meta property="og:updated_time" content="2018-03-13T06:56:18.049Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js事件节流">
-<meta name="twitter:description" content="js事件节流">
+<meta name="twitter:title" content="属性描述符">
+<meta name="twitter:description" content="对象属性的扩展使用.的形式动态添加（不可指定属性描述符） 使用Object.defineProperty的形式来添加（可以指定属性描述符）">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -157,14 +157,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-diary/js事件节流.html" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-diary/属性描述符.html" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      js事件节流
+      属性描述符
     </h1>
   
 
@@ -174,85 +174,91 @@ var _hmt = _hmt || [];
 		    </span>
         
         
-        <a href="/diary/js事件节流.html.html" class="archive-article-date">
-  	<time datetime="2018-03-09T07:42:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
+        <a href="/diary/属性描述符.html" class="archive-article-date">
+  	<time datetime="2018-03-13T01:57:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。</p>
-</blockquote>
-<blockquote>
-<p>以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。</p>
-</blockquote>
-<blockquote>
-<p>DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。</p>
-</blockquote>
-<blockquote>
-<p>为了解决这个问题，需要使用定时器对该函数进行节流。</p>
-</blockquote>
-<a id="more"></a> 
-<blockquote>
-<p>函数节流背后的基本思想是：某些代码不可以在没有间断的情况下连续重复执行。</p>
-</blockquote>
-<blockquote>
-<p>第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码，当第二次调用函数时，它会清除前一次的定时器并设置另一个。如果前一次的定时器已经执行过了，这个操作就没有任何意义。</p>
-</blockquote>
-<blockquote>
-<p>然而，如果前一个定时器尚未执行，其实就是将其替换成一个新的定时器。目的是只有在执行函数的请求停止了一段时间之后才执行。</p>
-</blockquote>
-<blockquote>
-<p>throttle()函数：自动地进行定时器的设置和清除。接收两个参数：要执行的函数和在哪个作用域执行。</p>
-</blockquote>
-<blockquote>
-<p>throttle()首先清除之前设置的任何定时器，定时器ID是存储在函数的tID属性中的，第一次把方法传递给throttle()函数的时候，这个属性可能并不存在。</p>
-</blockquote>
-<blockquote>
-<p>接下来，创建一个新的定时器，并将其ID存储在方法的tID属性中。如果这是第一次对这个方法调用throttle()的话，那么这段代码就会创建该属性。定时器代码使用call()来确保方法在适当的环境中执行。</p>
-</blockquote>
-<blockquote>
-<p>如果没有给出第二个参数，那么就在全局作用域内执行该方法。</p>
-</blockquote>
-<blockquote>
-<p>时间间隔设为500ms，这表示监听鼠标的mousemove、scroll，浏览器窗口的resize等事件，事件处理函数会连续调用多次，但只在最后一次触发该事件。</p>
-</blockquote>
-<blockquote>
-<p>节流函数主体</p>
-</blockquote>
-<pre><code>
-function throttle(method, context) {  
-     clearTimeout(method.tId);  
-     method.tId=setTimeout(function(){  
-         method.call(context);  
-     },500);  
- } 
+        <h3 id="对象属性的扩展"><a href="#对象属性的扩展" class="headerlink" title="对象属性的扩展"></a>对象属性的扩展</h3><pre><code>使用.的形式动态添加（不可指定属性描述符）
+使用Object.defineProperty的形式来添加（可以指定属性描述符）
+</code></pre><a id="more"></a> 
+<h3 id="获取对象属性的描述符"><a href="#获取对象属性的描述符" class="headerlink" title="获取对象属性的描述符"></a>获取对象属性的描述符</h3><pre><code>Object.getOwnPropertyDescriptor(obj,&quot;name&quot;);
+</code></pre><h3 id="属性描述符"><a href="#属性描述符" class="headerlink" title="属性描述符"></a>属性描述符</h3><pre><code>writable：属性值的修改的权限
+    true：属性值是可以修改的
+    false：属性值是不可以修改的
+            默认情况下静默失败
+            严格模式下报错
+
+configable：属性的重定义与删除权限
+    true：属性是可以重新定义和删除的
+    false：属性是不可以重新定义和删除的
+            默认情况和严格模式下都会报错
+            false情况下writable由true转成false是合理的,不会报错
+
+emumerable：属性的枚举权限(能不能出现在for in循环中)
+    true：属性是可以重新定义和删除的
+    false：属性是不可以重新定义和删除的
+            默认情况和严格模式下都会报错
+</code></pre><h3 id="set-amp-get"><a href="#set-amp-get" class="headerlink" title="set&amp;get"></a>set&amp;get</h3><pre><code>get 方法控制着属性的读取操作
+set 方法控制着属性的赋值操作
+
+拥有get或set方法，或两者都有的属性，我们称之为访问描述符（与数据描述符相对应）
+访问描述符与writable是会冲突的
+</code></pre><h3 id="不变性"><a href="#不变性" class="headerlink" title="不变性"></a>不变性</h3><pre><code>常量属性
+    将属性的writable和configurable设置为false
+禁止属性的扩展
+    Object.preventExtensions(obj);
+密封
+    Object.seal(obj)
+    在禁止对象扩展的基础上把现有属性的configurable都调整为false
+冻结
+    Object.freeze(obj)
+    在密封对象的基础上把现有属性的writable都调整为false
+注意
+    js所有的方法都只会影响对象的直接属性
+</code></pre><h3 id="判断枚举（不会遍历原型链）"><a href="#判断枚举（不会遍历原型链）" class="headerlink" title="判断枚举（不会遍历原型链）"></a>判断枚举（不会遍历原型链）</h3><pre><code>obj.propertyIsEnumerable(&quot;a&quot;)
+</code></pre><h3 id="获取对象所有的可枚举属性（不会遍历原型链）"><a href="#获取对象所有的可枚举属性（不会遍历原型链）" class="headerlink" title="获取对象所有的可枚举属性（不会遍历原型链）"></a>获取对象所有的可枚举属性（不会遍历原型链）</h3><pre><code>Object.keys(obj)
+</code></pre><h3 id="获取对象所有的属性（不会遍历原型链）"><a href="#获取对象所有的属性（不会遍历原型链）" class="headerlink" title="获取对象所有的属性（不会遍历原型链）"></a>获取对象所有的属性（不会遍历原型链）</h3><pre><code>obj.getOwnPropertyNames(&quot;a&quot;)
+</code></pre><h3 id="存在性检查"><a href="#存在性检查" class="headerlink" title="存在性检查"></a>存在性检查</h3><pre><code>(会遍历原型链)in操作符
+(不会遍历原型链，只在对象中查找)obj.hasOwnProperty(&quot;a);
+</code></pre><h3 id="属性的查找"><a href="#属性的查找" class="headerlink" title="属性的查找"></a>属性的查找</h3><pre><code>1.在对象中查找是否具有相同名称的属性，如果找到，就会返回这个属性的值。
+2.如果没有找到，则遍历原型链
+3.无论·如何都没找到，返回undefined
+</code></pre><h3 id="属性的设置"><a href="#属性的设置" class="headerlink" title="属性的设置"></a>属性的设置</h3><pre><code>1.如果属性直接存在于对象中　不在原型链上
+    找到直接存在于对象中的属性
+    -数据描述符(没有setter/getter)
+        直接修改对象中的属性(注意writbale的值)
+    -访问描述符
+        直接调用set方法
+
+2.如果属性不直接存在于对象中也不在原型链上
+    在对象的直接属性中添加一个属性（数据描述符）   
+    value:&quot;a&quot;
+    writable:true
+    configurable:true
+    enumerable:true
+
+3.如果属性不直接存在于对象中  在原型链上
+    ①.该属性是数据描述符(没有setter/getter)
+        -writbale为true
+    直接在对象中添加一个属性，我们称之为屏蔽属性
+        -writbale为false
+        报错，不会生成屏蔽属性
+
+    ②.该属性是访问描述符
+        调用set，不会生成屏蔽属性
+
+
+4.如果属性直接存在于对象中  也在原型链上
+    找到直接存在于对象中的属性
+    -数据描述符(没有setter/getter)
+        直接修改对象中的属性(注意writbale的值)
+    -访问描述符
+        直接调用set方法
 </code></pre>
-
-<blockquote>
-<p>节流调取处理函数</p>
-</blockquote>
-<pre><code>
-var n = 1
- function resizeHandler() {  
-     console.log(n);  
-     n++;  
- }
-</code></pre>
-
-<blockquote>
-<p>调取节流函数</p>
-</blockquote>
-<pre>
-<code>
-window.onresize = function(){  
-    throttle(resizeHandler, window); // 或throttle(resizeHandler);  
-}; 
-</code>
-</pre>
-
       
 
       
@@ -347,7 +353,7 @@ window.onresize = function(){
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yinzhonghao123.github.io/diary/js事件节流.html.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yinzhonghao123.github.io/diary/属性描述符.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -362,18 +368,18 @@ window.onresize = function(){
   
 <nav id="article-nav">
   
-    <a href="/diary/解决Vue方法中setTimeout改变变量的值无效.html.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/diary/重绘&重排.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          解决Vue方法中setTimeout改变变量的值无效
+          重绘&amp;重排
         
       </div>
     </a>
   
   
-    <a href="/diary/关于头像.html.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于头像</div>
+    <a href="/diary/浏览器兼容性.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浏览器兼容性</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,22 +413,6 @@ window.onresize = function(){
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://yinzhonghao123.github.io/diary/js事件节流.html.html",
-  owner: 'yinzhonghao123',
-  repo: 'yinzhonghao123.github.io',
-  oauth: {
-    client_id: 'cde34ce9ec780262219a',
-    client_secret: '2de52fe3a31c1e0ef1edca6d20d61f7e88b0825e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-  
 
 
 
@@ -433,7 +423,7 @@ gitment.render('gitment-ctn')
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
   var gitment = new Gitment({
-    id: 'Fri Mar 09 2018 15:42:07 GMT+0800',
+    id: 'Tue Mar 13 2018 09:57:39 GMT+0800',
     owner: "yinzhonghao123",//github用户名
     repo: "yinzhonghao123.github.io",//用户存储评论的github项目名称
     oauth: {
