@@ -7,18 +7,18 @@
   <meta name="baidu-site-verification" content="7wlverLnkF" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yinzhonghao123.github.io">
-  <title>haslayout | 未卜的博客</title>
+  <title>js事件节流 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
+  <meta name="description" content="js事件节流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="haslayout">
-<meta property="og:url" content="https://yinzhonghao123.github.io/haslayout">
+<meta property="og:title" content="js事件节流">
+<meta property="og:url" content="https://yinzhonghao123.github.io/js事件节流.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
+<meta property="og:description" content="js事件节流">
 <meta property="og:updated_time" content="2018-03-17T07:55:11.142Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="haslayout">
-<meta name="twitter:description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
+<meta name="twitter:title" content="js事件节流">
+<meta name="twitter:description" content="js事件节流">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -161,14 +161,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-haslayout" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js事件节流" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      haslayout
+      js事件节流
     </h1>
   
 
@@ -178,46 +178,85 @@ var _hmt = _hmt || [];
 		    </span>
         
         
-        <a href="/haslayout" class="archive-article-date">
-  	<time datetime="2018-03-13T02:14:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+        <a href="/js事件节流.html" class="archive-article-date">
+  	<time datetime="2018-03-09T07:42:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="/assets/js/APlayer.min.js"> </script><h3 id="什么是haslayout"><a href="#什么是haslayout" class="headerlink" title="什么是haslayout"></a>什么是haslayout</h3><pre><code>layout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算，
-以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。
-而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。
-
-必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性，
-因此haslayout属性只针对IE6和IE7。
-</code></pre><a id="more"></a> 
-<h3 id="为什么会有haslayout"><a href="#为什么会有haslayout" class="headerlink" title="为什么会有haslayout"></a>为什么会有haslayout</h3><pre><code>理论上说，每个元素都应该控制自己的尺寸和定位，即每个元素都应该“拥有布局”，当然这只是理想状态。
-而对于早期的IE显示引擎来说，如果所有元素都“拥有布局”的话，会导致很大的性能问题。
-因此IE开发团队决定使用布局概念来减少浏览器的性能开销，即只将布局应用于实际需要的那些元素，
-所以便出现了“拥有布局”和“没有拥有布局”两种情况。
-</code></pre><h3 id="默认拥有布局的元素"><a href="#默认拥有布局的元素" class="headerlink" title="默认拥有布局的元素"></a>默认拥有布局的元素</h3><pre><code>html, body, table, tr, td, img, hr,
-input, select, textarea, button,
-iframe, embed, object, applet, marquee
-</code></pre><h3 id="怎么触发haslayout"><a href="#怎么触发haslayout" class="headerlink" title="怎么触发haslayout"></a>怎么触发haslayout</h3><pre><code>float: left或right
-display: inline-block
-position: absolute
-width: 除auto外任何值
-height: 除auto外任何值
-zoom: 除normal外任何值(zoom: 1无法在IE5.0中触发haslayout)
-writing-mode: tb-rl
-
-在IE7中，以下属性也可以触发元素的haslayout
-    min-height: 任意值
-    min-width: 任意值
-    max-height: 除none 外任意值
-    max-width: 除none 外任意值
-    overflow: 除visible外任意值，仅用于块级元素
-    overflow-x: 除visible 外任意值，仅用于块级元素
-    overflow-y: 除visible 外任意值，仅用于块级元素
-    position: fixed
+        <script src="/assets/js/APlayer.min.js"> </script><blockquote>
+<p>鼠标的mousemove、scroll，浏览器窗口的resize事件等，都是在短时间内重复触发。</p>
+</blockquote>
+<blockquote>
+<p>以onresize事件为例，若事件处理程序需要进行修改元素宽度高度等操作，那么频繁的触发事件会导致频繁的重绘页面。</p>
+</blockquote>
+<blockquote>
+<p>DOM操作比非DOM交互需要更多的内存和CPU时间，连续尝试进行过多的DOM相关操作可能会导致浏览器挂起，有时候甚至会崩溃。</p>
+</blockquote>
+<blockquote>
+<p>为了解决这个问题，需要使用定时器对该函数进行节流。</p>
+</blockquote>
+<a id="more"></a> 
+<blockquote>
+<p>函数节流背后的基本思想是：某些代码不可以在没有间断的情况下连续重复执行。</p>
+</blockquote>
+<blockquote>
+<p>第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码，当第二次调用函数时，它会清除前一次的定时器并设置另一个。如果前一次的定时器已经执行过了，这个操作就没有任何意义。</p>
+</blockquote>
+<blockquote>
+<p>然而，如果前一个定时器尚未执行，其实就是将其替换成一个新的定时器。目的是只有在执行函数的请求停止了一段时间之后才执行。</p>
+</blockquote>
+<blockquote>
+<p>throttle()函数：自动地进行定时器的设置和清除。接收两个参数：要执行的函数和在哪个作用域执行。</p>
+</blockquote>
+<blockquote>
+<p>throttle()首先清除之前设置的任何定时器，定时器ID是存储在函数的tID属性中的，第一次把方法传递给throttle()函数的时候，这个属性可能并不存在。</p>
+</blockquote>
+<blockquote>
+<p>接下来，创建一个新的定时器，并将其ID存储在方法的tID属性中。如果这是第一次对这个方法调用throttle()的话，那么这段代码就会创建该属性。定时器代码使用call()来确保方法在适当的环境中执行。</p>
+</blockquote>
+<blockquote>
+<p>如果没有给出第二个参数，那么就在全局作用域内执行该方法。</p>
+</blockquote>
+<blockquote>
+<p>时间间隔设为500ms，这表示监听鼠标的mousemove、scroll，浏览器窗口的resize等事件，事件处理函数会连续调用多次，但只在最后一次触发该事件。</p>
+</blockquote>
+<blockquote>
+<p>节流函数主体</p>
+</blockquote>
+<pre><code>
+function throttle(method, context) {  
+     clearTimeout(method.tId);  
+     method.tId=setTimeout(function(){  
+         method.call(context);  
+     },500);  
+ } 
 </code></pre>
+
+<blockquote>
+<p>节流调取处理函数</p>
+</blockquote>
+<pre><code>
+var n = 1
+ function resizeHandler() {  
+     console.log(n);  
+     n++;  
+ }
+</code></pre>
+
+<blockquote>
+<p>调取节流函数</p>
+</blockquote>
+<pre>
+<code>
+window.onresize = function(){  
+    throttle(resizeHandler, window); // 或throttle(resizeHandler);  
+}; 
+</code>
+</pre>
+
       
 
       
@@ -257,7 +296,7 @@ writing-mode: tb-rl
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/css//" class="article-tag-list-link color4">css</a>
+        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -312,7 +351,7 @@ writing-mode: tb-rl
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yinzhonghao123.github.io/haslayout" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yinzhonghao123.github.io/js事件节流.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,18 +365,18 @@ writing-mode: tb-rl
   
 <nav id="article-nav">
   
-    <a href="/BFC" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/解决Vue方法中setTimeout改变变量的值无效.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          BFC
+          Vue中setTimeout值无效
         
       </div>
     </a>
   
   
-    <a href="/重绘-重排" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">重绘&amp;重排</div>
+    <a href="/关于头像.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于头像</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -376,7 +415,7 @@ writing-mode: tb-rl
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://yinzhonghao123.github.io/haslayout",
+  id: "https://yinzhonghao123.github.io/js事件节流.html",
   owner: 'yinzhonghao123',
   repo: 'yinzhonghao123.github.io',
   oauth: {

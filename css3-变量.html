@@ -7,18 +7,20 @@
   <meta name="baidu-site-verification" content="7wlverLnkF" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yinzhonghao123.github.io">
-  <title>重绘&amp;重排 | 未卜的博客</title>
+  <title>css3 变量 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="重绘(Repaint)重绘是一个元素外观的改变所触发的浏览器行为，例如改变outline、背景色等属性。浏览器会根据元素的新属性重新绘制， 使元素呈现新的外观。重绘不会带来重新布局，所以并不一定伴随重排。">
+  <meta name="description" content="css3 变量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重绘&amp;重排">
-<meta property="og:url" content="https://yinzhonghao123.github.io/重绘-重排">
+<meta property="og:title" content="css3 变量">
+<meta property="og:url" content="https://yinzhonghao123.github.io/css3-变量.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="重绘(Repaint)重绘是一个元素外观的改变所触发的浏览器行为，例如改变outline、背景色等属性。浏览器会根据元素的新属性重新绘制， 使元素呈现新的外观。重绘不会带来重新布局，所以并不一定伴随重排。">
-<meta property="og:updated_time" content="2018-03-17T07:55:11.147Z">
+<meta property="og:description" content="css3 变量">
+<meta property="og:image" content="https://yinzhonghao123.github.io/img/c3bl.png">
+<meta property="og:updated_time" content="2018-03-17T07:55:11.141Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重绘&amp;重排">
-<meta name="twitter:description" content="重绘(Repaint)重绘是一个元素外观的改变所触发的浏览器行为，例如改变outline、背景色等属性。浏览器会根据元素的新属性重新绘制， 使元素呈现新的外观。重绘不会带来重新布局，所以并不一定伴随重排。">
+<meta name="twitter:title" content="css3 变量">
+<meta name="twitter:description" content="css3 变量">
+<meta name="twitter:image" content="https://yinzhonghao123.github.io/img/c3bl.png">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -161,14 +163,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-重绘-重排" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-css3-变量" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      重绘&amp;重排
+      css3 变量
     </h1>
   
 
@@ -178,50 +180,102 @@ var _hmt = _hmt || [];
 		    </span>
         
         
-        <a href="/重绘-重排" class="archive-article-date">
-  	<time datetime="2018-03-13T02:07:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+        <a href="/css3-变量.html" class="archive-article-date">
+  	<time datetime="2018-03-09T08:50:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="/assets/js/APlayer.min.js"> </script><h3 id="重绘-Repaint"><a href="#重绘-Repaint" class="headerlink" title="重绘(Repaint)"></a>重绘(Repaint)</h3><pre><code>重绘是一个元素外观的改变所触发的浏览器行为，例如改变outline、背景色等属性。浏览器会根据元素的新属性重新绘制，
-使元素呈现新的外观。重绘不会带来重新布局，所以并不一定伴随重排。
-</code></pre><a id="more"></a> 
-<h3 id="重排-Reflow"><a href="#重排-Reflow" class="headerlink" title="重排(Reflow)"></a>重排(Reflow)</h3><pre><code>渲染对象在创建完成并添加到渲染树时，并不包含位置和大小信息。计算这些值的过程称为布局或重排
+        <script src="/assets/js/APlayer.min.js"> </script><blockquote>
+<p>一、支持范围</p>
+</blockquote>
+<p><img src="/img/c3bl.png" alt="" title="描述"></p>
+<a id="more"></a> 
+<blockquote>
+<p>二、CSS变量var()语法和用法和特性</p>
+</blockquote>
+<pre><code>CSS中原生的变量定义语法是：--*，变量使用语法是：var(--*)，其中*表示我们的变量名称。
+关于命名这个东西，各种语言都有些显示，例如CSS选择器不能是数字开头，JS中的变量是不能直接数值的，但是，在CSS变量中，这些限制通通没有,
+例如：
+</code></pre>   <pre>
+   <code>
+   :root {
+     --1: #369;
+   }
+   body {
+     background-color: var(--1);
+   }
+   </code>
+   </pre>
+    另外值得注意的是 CSS 变量并不支持 !important 声明。
 
-&quot;重绘&quot;不一定需要&quot;重排&quot;，比如改变某个网页元素的颜色，就只会触发&quot;重绘&quot;，不会触发&quot;重排&quot;，因为布局没有改变。
- 但是，&quot;重排&quot;必然导致&quot;重绘&quot;，比如改变一个网页元素的位置，就会同时触发&quot;重排&quot;和&quot;重绘&quot;，因为布局改变了。
-</code></pre><h3 id="常见的触发重排的操作"><a href="#常见的触发重排的操作" class="headerlink" title="常见的触发重排的操作"></a>常见的触发重排的操作</h3><pre><code>Reflow 的成本比 Repaint 的成本高得多的多。DOM Tree 里的每个结点都会有 reflow 方法，
-一个结点的 reflow 很有可能导致子结点，甚至父点以及同级结点的 reflow。在一些高性能的电脑上也许还没什么，
-但是如果 reflow 发生在手机上，那么这个过程是非常痛苦和耗电的。
+    但是，不能包含$，[，^，(，%等字符，普通字符局限在只要是“数字[0-9]”“字母[a-zA-Z]”“下划线_”和“短横线-”这些组合，但是可以是中文，日文或者韩文，例如：
+   <pre>
+      <code>
+        body {
+           --深蓝: #369;
+           background-color: var(--深蓝);
+        }
+      </code>
+   </pre>
 
-所以，下面这些动作有很大可能会是成本比较高的。
-    当你增加、删除、修改 DOM 结点时，会导致 Reflow , Repaint。
-    当你移动 DOM 的位置
-    当你修改 CSS 样式的时候。
-    当你 Resize 窗口的时候（移动端没有这个问题）
-    当你修改网页的默认字体时。
-    获取某些属性时
-    注：display:none 会触发 reflow，而 visibility:hidden 只会触发 repaint，
-        因为没有发现位置变化。
-</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><pre><code>当你请求向浏览器请求一些 style信息的时候，就会让浏览器flush队列，比如：
+<pre><code>所以，我们就可以直接使用中文名称作为变量，即使英语4级没过的小伙伴也不会有压力了，我们也不需要随时挂个翻译器在身边了。
+无论是变量的定义和使用只能在声明块{}里面，例如，下面这样是无效的：
+--深蓝: #369;
+</code></pre>   <pre>
+         <code>
+           body {
+                 background-color: var(--深蓝);
+               }
+         </code>
+   </pre>
 
-1. offsetTop, offsetLeft, offsetWidth, offsetHeight
-2. scrollTop/Left/Width/Height
-3. clientTop/Left/Width/Height
-4. width,height
+<pre><code>变量的定义，或者说声明跟CSS计数器的声明类似的，你应该摆脱Sass/Less等预编译工具语法先入为主的语法影响，把CSS的原生变量理解为一种CSS属性。
+这样，你就对其权重和变量应用规则要容易理解地多。
+例如下面这个例子：
+</code></pre>   <pre>
+            <code>
+              :root { --color: purple; }
+                  div { --color: green; }
+                  #alert { --color: red; }
+                  * { color: var(--color); }
 
-当你请求上面的一些属性的时候，浏览器为了给你最精确的值，需要flush队列，
-因为队列中可能会有影响到这些值的操作。即使你获取元素的布局和样式信息跟最近的布局信息差不多，
-浏览器都会强行刷新渲染队列。
-</code></pre><h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><pre><code>1.将多次改变样式属性的操作合并成一次操作
-2.将需要多次重排的元素，position属性设为absolute或fixed，
-    这样此元素就脱离了文档流，它的变化不会影响到其他元素。例如有动画效果的元素就最好设置为绝对定位。
-3. 由于display属性为none的元素不在渲染树中，对隐藏的元素操作不会引发其他元素的重排。
-    如果要对一个元素进行复杂的操作时，可以先隐藏它，操作完成后再显示。这样只在隐藏和显示时触发2次重排。
-</code></pre>
+
+                  <p>我的紫色继承于根元素</p>
+                      <div>我的绿色来自直接设置</div>
+                      <div id="alert">
+                        ID选择器权重更高，因此阿拉是红色！
+                        <p>我也是红色，占了继承的光</p>
+                      </div>
+            </code>
+      </pre>
+
+
+
+
+
+<pre><code>上面这个例子我们可以获得这些信息：
+1. 变量也是跟着CSS选择器走的，如果变量所在的选择器和使用变量的元素没有交集，是没有效果的。例如#alert定义的变量，只有id为alert的元素才能享有。如果你想变量全局使用，则你可以设置在:root选择器上；
+2. 当存在多个同样名称的变量时候，变量的覆盖规则由CSS选择器的权重决定的，但并无!important这种用法，因为没有必要，!important设计初衷是干掉JS的style设置，但对于变量的定义则没有这样的需求。
+如果我们使用的变量没有定义（注意，仅限于没有定义），则使用后面的值作为元素的属性值
+</code></pre>   <pre>
+           <code>
+             .box {
+                   --1: #369;
+                 }
+                 body {
+                   background-color: var(--1, #cd0000);
+                 }
+           </code>
+     </pre>
+
+
+
+
+
+
       
 
       
@@ -316,7 +370,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yinzhonghao123.github.io/重绘-重排" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yinzhonghao123.github.io/css3-变量.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -330,18 +384,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/haslayout" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/js模块化.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          haslayout
+          js模块化
         
       </div>
     </a>
   
   
-    <a href="/属性描述符" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">属性描述符</div>
+    <a href="/解决Vue方法中setTimeout改变变量的值无效.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue中setTimeout值无效</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -380,7 +434,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://yinzhonghao123.github.io/重绘-重排",
+  id: "https://yinzhonghao123.github.io/css3-变量.html",
   owner: 'yinzhonghao123',
   repo: 'yinzhonghao123.github.io',
   oauth: {

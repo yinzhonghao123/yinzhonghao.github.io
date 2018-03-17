@@ -18,8 +18,8 @@
   
   <entry>
     <title>BFC</title>
-    <link href="https://yinzhonghao123.github.io/BFC"/>
-    <id>https://yinzhonghao123.github.io/BFC</id>
+    <link href="https://yinzhonghao123.github.io/BFC.html"/>
+    <id>https://yinzhonghao123.github.io/BFC.html</id>
     <published>2018-03-13T02:15:42.000Z</published>
     <updated>2018-03-17T07:55:11.140Z</updated>
     
@@ -51,8 +51,8 @@ Formatting context 　　
   
   <entry>
     <title>haslayout</title>
-    <link href="https://yinzhonghao123.github.io/haslayout"/>
-    <id>https://yinzhonghao123.github.io/haslayout</id>
+    <link href="https://yinzhonghao123.github.io/haslayout.html"/>
+    <id>https://yinzhonghao123.github.io/haslayout.html</id>
     <published>2018-03-13T02:14:51.000Z</published>
     <updated>2018-03-17T07:55:11.142Z</updated>
     
@@ -75,8 +75,8 @@ Formatting context 　　
   
   <entry>
     <title>重绘&amp;重排</title>
-    <link href="https://yinzhonghao123.github.io/%E9%87%8D%E7%BB%98-%E9%87%8D%E6%8E%92"/>
-    <id>https://yinzhonghao123.github.io/重绘-重排</id>
+    <link href="https://yinzhonghao123.github.io/%E9%87%8D%E7%BB%98-%E9%87%8D%E6%8E%92.html"/>
+    <id>https://yinzhonghao123.github.io/重绘-重排.html</id>
     <published>2018-03-13T02:07:27.000Z</published>
     <updated>2018-03-17T07:55:11.147Z</updated>
     
@@ -95,8 +95,8 @@ Formatting context 　　
   
   <entry>
     <title>属性描述符</title>
-    <link href="https://yinzhonghao123.github.io/%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6"/>
-    <id>https://yinzhonghao123.github.io/属性描述符</id>
+    <link href="https://yinzhonghao123.github.io/%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6.html"/>
+    <id>https://yinzhonghao123.github.io/属性描述符.html</id>
     <published>2018-03-13T01:57:39.000Z</published>
     <updated>2018-03-17T07:55:11.144Z</updated>
     
@@ -115,8 +115,8 @@ Formatting context 　　
   
   <entry>
     <title>浏览器兼容性</title>
-    <link href="https://yinzhonghao123.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7"/>
-    <id>https://yinzhonghao123.github.io/浏览器兼容性</id>
+    <link href="https://yinzhonghao123.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7.html"/>
+    <id>https://yinzhonghao123.github.io/浏览器兼容性.html</id>
     <published>2018-03-13T01:53:19.000Z</published>
     <updated>2018-03-17T07:55:11.144Z</updated>
     
@@ -133,8 +133,8 @@ Formatting context 　　
   
   <entry>
     <title>js模块化</title>
-    <link href="https://yinzhonghao123.github.io/js%E6%A8%A1%E5%9D%97%E5%8C%96"/>
-    <id>https://yinzhonghao123.github.io/js模块化</id>
+    <link href="https://yinzhonghao123.github.io/js%E6%A8%A1%E5%9D%97%E5%8C%96.html"/>
+    <id>https://yinzhonghao123.github.io/js模块化.html</id>
     <published>2018-03-09T10:15:43.000Z</published>
     <updated>2018-03-17T07:55:11.143Z</updated>
     
@@ -163,8 +163,8 @@ Formatting context 　　
   
   <entry>
     <title>css3 变量</title>
-    <link href="https://yinzhonghao123.github.io/css3-%E5%8F%98%E9%87%8F"/>
-    <id>https://yinzhonghao123.github.io/css3-变量</id>
+    <link href="https://yinzhonghao123.github.io/css3-%E5%8F%98%E9%87%8F.html"/>
+    <id>https://yinzhonghao123.github.io/css3-变量.html</id>
     <published>2018-03-09T08:50:10.000Z</published>
     <updated>2018-03-17T07:55:11.141Z</updated>
     
@@ -181,8 +181,8 @@ Formatting context 　　
   
   <entry>
     <title>Vue中setTimeout值无效</title>
-    <link href="https://yinzhonghao123.github.io/%E8%A7%A3%E5%86%B3Vue%E6%96%B9%E6%B3%95%E4%B8%ADsetTimeout%E6%94%B9%E5%8F%98%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC%E6%97%A0%E6%95%88"/>
-    <id>https://yinzhonghao123.github.io/解决Vue方法中setTimeout改变变量的值无效</id>
+    <link href="https://yinzhonghao123.github.io/%E8%A7%A3%E5%86%B3Vue%E6%96%B9%E6%B3%95%E4%B8%ADsetTimeout%E6%94%B9%E5%8F%98%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC%E6%97%A0%E6%95%88.html"/>
+    <id>https://yinzhonghao123.github.io/解决Vue方法中setTimeout改变变量的值无效.html</id>
     <published>2018-03-09T08:28:40.000Z</published>
     <updated>2018-03-17T07:55:11.146Z</updated>
     
@@ -199,8 +199,8 @@ Formatting context 　　
   
   <entry>
     <title>js事件节流</title>
-    <link href="https://yinzhonghao123.github.io/js%E4%BA%8B%E4%BB%B6%E8%8A%82%E6%B5%81"/>
-    <id>https://yinzhonghao123.github.io/js事件节流</id>
+    <link href="https://yinzhonghao123.github.io/js%E4%BA%8B%E4%BB%B6%E8%8A%82%E6%B5%81.html"/>
+    <id>https://yinzhonghao123.github.io/js事件节流.html</id>
     <published>2018-03-09T07:42:07.000Z</published>
     <updated>2018-03-17T07:55:11.142Z</updated>
     
@@ -217,8 +217,8 @@ Formatting context 　　
   
   <entry>
     <title>关于头像</title>
-    <link href="https://yinzhonghao123.github.io/%E5%85%B3%E4%BA%8E%E5%A4%B4%E5%83%8F"/>
-    <id>https://yinzhonghao123.github.io/关于头像</id>
+    <link href="https://yinzhonghao123.github.io/%E5%85%B3%E4%BA%8E%E5%A4%B4%E5%83%8F.html"/>
+    <id>https://yinzhonghao123.github.io/关于头像.html</id>
     <published>2018-03-09T00:32:27.000Z</published>
     <updated>2018-03-17T07:55:11.143Z</updated>
     
