@@ -7,20 +7,20 @@
   <meta name="baidu-site-verification" content="7wlverLnkF" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yinzhonghao123.github.io">
-  <title>css3 变量 | 未卜的博客</title>
+  <title>关于头像 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="css3 变量">
+  <meta name="description" content="这个头像呢是因为孟二蛋才换的，看着喜庆，粗糙的表情😄">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css3 变量">
-<meta property="og:url" content="https://yinzhonghao123.github.io/css3-变量.html">
+<meta property="og:title" content="关于头像">
+<meta property="og:url" content="https://yinzhonghao123.github.io/a3efbd8f.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="css3 变量">
-<meta property="og:image" content="https://yinzhonghao123.github.io/img/c3bl.png">
-<meta property="og:updated_time" content="2018-03-17T07:55:11.141Z">
+<meta property="og:description" content="这个头像呢是因为孟二蛋才换的，看着喜庆，粗糙的表情😄">
+<meta property="og:image" content="https://yinzhonghao123.github.io/img/favicon.png">
+<meta property="og:updated_time" content="2018-03-17T07:55:11.143Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css3 变量">
-<meta name="twitter:description" content="css3 变量">
-<meta name="twitter:image" content="https://yinzhonghao123.github.io/img/c3bl.png">
+<meta name="twitter:title" content="关于头像">
+<meta name="twitter:description" content="这个头像呢是因为孟二蛋才换的，看着喜庆，粗糙的表情😄">
+<meta name="twitter:image" content="https://yinzhonghao123.github.io/img/favicon.png">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -163,14 +163,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-css3-变量" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于头像" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      css3 变量
+      关于头像
     </h1>
   
 
@@ -180,8 +180,8 @@ var _hmt = _hmt || [];
 		    </span>
         
         
-        <a href="/css3-变量.html" class="archive-article-date">
-  	<time datetime="2018-03-09T08:50:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
+        <a href="/a3efbd8f.html" class="archive-article-date">
+  	<time datetime="2018-03-09T00:32:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-09</time>
 </a>
         
       </header>
@@ -189,92 +189,9 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <script src="/assets/js/APlayer.min.js"> </script><blockquote>
-<p>一、支持范围</p>
+<p>这个头像呢是因为孟二蛋才换的，看着喜庆，粗糙的表情😄<br><a id="more"></a> </p>
 </blockquote>
-<p><img src="/img/c3bl.png" alt="" title="描述"></p>
-<a id="more"></a> 
-<blockquote>
-<p>二、CSS变量var()语法和用法和特性</p>
-</blockquote>
-<pre><code>CSS中原生的变量定义语法是：--*，变量使用语法是：var(--*)，其中*表示我们的变量名称。
-关于命名这个东西，各种语言都有些显示，例如CSS选择器不能是数字开头，JS中的变量是不能直接数值的，但是，在CSS变量中，这些限制通通没有,
-例如：
-</code></pre>   <pre>
-   <code>
-   :root {
-     --1: #369;
-   }
-   body {
-     background-color: var(--1);
-   }
-   </code>
-   </pre>
-    另外值得注意的是 CSS 变量并不支持 !important 声明。
-
-    但是，不能包含$，[，^，(，%等字符，普通字符局限在只要是“数字[0-9]”“字母[a-zA-Z]”“下划线_”和“短横线-”这些组合，但是可以是中文，日文或者韩文，例如：
-   <pre>
-      <code>
-        body {
-           --深蓝: #369;
-           background-color: var(--深蓝);
-        }
-      </code>
-   </pre>
-
-<pre><code>所以，我们就可以直接使用中文名称作为变量，即使英语4级没过的小伙伴也不会有压力了，我们也不需要随时挂个翻译器在身边了。
-无论是变量的定义和使用只能在声明块{}里面，例如，下面这样是无效的：
---深蓝: #369;
-</code></pre>   <pre>
-         <code>
-           body {
-                 background-color: var(--深蓝);
-               }
-         </code>
-   </pre>
-
-<pre><code>变量的定义，或者说声明跟CSS计数器的声明类似的，你应该摆脱Sass/Less等预编译工具语法先入为主的语法影响，把CSS的原生变量理解为一种CSS属性。
-这样，你就对其权重和变量应用规则要容易理解地多。
-例如下面这个例子：
-</code></pre>   <pre>
-            <code>
-              :root { --color: purple; }
-                  div { --color: green; }
-                  #alert { --color: red; }
-                  * { color: var(--color); }
-
-
-                  <p>我的紫色继承于根元素</p>
-                      <div>我的绿色来自直接设置</div>
-                      <div id="alert">
-                        ID选择器权重更高，因此阿拉是红色！
-                        <p>我也是红色，占了继承的光</p>
-                      </div>
-            </code>
-      </pre>
-
-
-
-
-
-<pre><code>上面这个例子我们可以获得这些信息：
-1. 变量也是跟着CSS选择器走的，如果变量所在的选择器和使用变量的元素没有交集，是没有效果的。例如#alert定义的变量，只有id为alert的元素才能享有。如果你想变量全局使用，则你可以设置在:root选择器上；
-2. 当存在多个同样名称的变量时候，变量的覆盖规则由CSS选择器的权重决定的，但并无!important这种用法，因为没有必要，!important设计初衷是干掉JS的style设置，但对于变量的定义则没有这样的需求。
-如果我们使用的变量没有定义（注意，仅限于没有定义），则使用后面的值作为元素的属性值
-</code></pre>   <pre>
-           <code>
-             .box {
-                   --1: #369;
-                 }
-                 body {
-                   background-color: var(--1, #cd0000);
-                 }
-           </code>
-     </pre>
-
-
-
-
-
+<p><img src="/img/favicon.png" alt="" title="描述"></p>
 
       
 
@@ -310,17 +227,6 @@ var _hmt = _hmt || [];
       
       
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/css//" class="article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -370,7 +276,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yinzhonghao123.github.io/css3-变量.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yinzhonghao123.github.io/a3efbd8f.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -384,20 +290,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/js模块化.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/27adbae0.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          js模块化
+          js事件节流
         
       </div>
     </a>
   
-  
-    <a href="/解决Vue方法中setTimeout改变变量的值无效.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vue中setTimeout值无效</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -434,7 +335,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://yinzhonghao123.github.io/css3-变量.html",
+  id: "https://yinzhonghao123.github.io/a3efbd8f.html",
   owner: 'yinzhonghao123',
   repo: 'yinzhonghao123.github.io',
   oauth: {

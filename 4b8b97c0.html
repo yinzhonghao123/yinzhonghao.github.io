@@ -7,18 +7,18 @@
   <meta name="baidu-site-verification" content="7wlverLnkF" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yinzhonghao123.github.io">
-  <title>浏览器兼容性 | 未卜的博客</title>
+  <title>haslayout | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.event事件对象兼容     event=event||window.event">
+  <meta name="description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器兼容性">
-<meta property="og:url" content="https://yinzhonghao123.github.io/浏览器兼容性.html">
+<meta property="og:title" content="haslayout">
+<meta property="og:url" content="https://yinzhonghao123.github.io/4b8b97c0.html">
 <meta property="og:site_name" content="未卜的博客">
-<meta property="og:description" content="1.event事件对象兼容     event=event||window.event">
-<meta property="og:updated_time" content="2018-03-17T07:55:11.144Z">
+<meta property="og:description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
+<meta property="og:updated_time" content="2018-03-17T07:55:11.142Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浏览器兼容性">
-<meta name="twitter:description" content="1.event事件对象兼容     event=event||window.event">
+<meta name="twitter:title" content="haslayout">
+<meta name="twitter:description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -161,14 +161,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-浏览器兼容性" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-haslayout" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      浏览器兼容性
+      haslayout
     </h1>
   
 
@@ -178,93 +178,45 @@ var _hmt = _hmt || [];
 		    </span>
         
         
-        <a href="/浏览器兼容性.html" class="archive-article-date">
-  	<time datetime="2018-03-13T01:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
+        <a href="/4b8b97c0.html" class="archive-article-date">
+  	<time datetime="2018-03-13T02:14:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="/assets/js/APlayer.min.js"> </script><pre><code>1.event事件对象兼容
-    event=event||window.event
+        <script src="/assets/js/APlayer.min.js"> </script><h3 id="什么是haslayout"><a href="#什么是haslayout" class="headerlink" title="什么是haslayout"></a>什么是haslayout</h3><pre><code>layout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算，
+以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。
+而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。
+
+必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性，
+因此haslayout属性只针对IE6和IE7。
 </code></pre><a id="more"></a> 
-<pre><code>2.event.x与event.y问题
-    问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；
-            Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。
-    解决方法：var myX = event.x ? event.x : event.pageX;
-            var myY = event.y ? event.y:event.pageY;
-    如果考虑第8条问题，就改用myEvent代替event即可。
+<h3 id="为什么会有haslayout"><a href="#为什么会有haslayout" class="headerlink" title="为什么会有haslayout"></a>为什么会有haslayout</h3><pre><code>理论上说，每个元素都应该控制自己的尺寸和定位，即每个元素都应该“拥有布局”，当然这只是理想状态。
+而对于早期的IE显示引擎来说，如果所有元素都“拥有布局”的话，会导致很大的性能问题。
+因此IE开发团队决定使用布局概念来减少浏览器的性能开销，即只将布局应用于实际需要的那些元素，
+所以便出现了“拥有布局”和“没有拥有布局”两种情况。
+</code></pre><h3 id="默认拥有布局的元素"><a href="#默认拥有布局的元素" class="headerlink" title="默认拥有布局的元素"></a>默认拥有布局的元素</h3><pre><code>html, body, table, tr, td, img, hr,
+input, select, textarea, button,
+iframe, embed, object, applet, marquee
+</code></pre><h3 id="怎么触发haslayout"><a href="#怎么触发haslayout" class="headerlink" title="怎么触发haslayout"></a>怎么触发haslayout</h3><pre><code>float: left或right
+display: inline-block
+position: absolute
+width: 除auto外任何值
+height: 除auto外任何值
+zoom: 除normal外任何值(zoom: 1无法在IE5.0中触发haslayout)
+writing-mode: tb-rl
 
-3.盒模型
-    盒模型包括：content，padding，border，margin
-    ie下为怪异盒模型，他的宽度获取为content+padding+border
-    普通浏览器的width获取值为content内容区的宽度
-    可以使用box-sizing
-        有两个值一个是content-box，另一个是border-box。
-        当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；
-        当设置为box-sizing:border-box时，将采用怪异模式解析计算；
-        目前使用此属性需要前缀如下:
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-
-4.input属性placeholder
-    IE8下不支持HTML5属性placeholder,可以使用插件进行解决
-
-5.setAttribute(&apos;style&apos;,&apos;color:red;&apos;)
-    FIREFOX支持(除了IE，现在所有浏览器都支持)，IE不支持
-    解决办法：不用setAttribute(&apos;style&apos;,&apos;color:red&apos;)
-        而用object.style.cssText = ‘color:red;&apos;(这写法也有例外)
-        最好的办法是上面种方法都用上，万无一失        
-
-6.监听事件
-    addEventListener支持除了ie的所有浏览器
-    attachEvent支持ie的监听事件，但是他的事件必须加上on
-
-7.移除事件
-        ie浏览器中datachEvent进行移除事件
-        其他浏览器中使用removeEventListener进行移除事件
-
-8.取消冒泡
-    取消冒泡
-        IE浏览器中使用cancelBuble=true来取消冒泡
-        普通浏览器中使用stopPropagation来禁止冒泡
-
-9.禁止默认行为
-    IE浏览器中使用returnValue=&apos;false&apos;来禁止默认行为
-    普通浏览中使用preventDefault()来禁止默认行为
-
-    document.onclick=function(e){
-        var e=e||window.event;
-        if (e.preventDefault) {
-          e.preventDefault();//W3C标准
-        }else{
-          e.returnValue=&apos;false&apos;;//IE..
-        }
-    }
-
-10.关于EVENT事件中的target：
-    //关于event事件中的target
-
-        document.onmouseover=function(e){
-            var e=e||window.event;
-            var Target=e.target||e.srcElement;//获取target的兼容写法，后面的为IE
-            var from=e.relatedTarget||e.formElement;//鼠标来的地方，同样后面的为IE...
-            var to=e.relatedTarget||e.toElement;//鼠标去的地方
-        }
-11.鼠标滚轮滚动事件：
-        //鼠标滚轮事件
-        //火狐中的滚轮事件
-        document.addEventListener(&quot;DOMMouseScroll&quot;,function(event){
-            alert(event.detail);//若前滚的话为 -3，后滚的话为 3
-        },false)
-        //非火狐中的滚轮事件
-        document.onmousewheel=function(event){
-            alert(event.detail);//前滚：120，后滚：-120
-        }
-12.ajax对象
-        IE浏览器中使用ActiveXObject创建ajax对象
-        普通浏览器中使用XmlHttprequest创建ajax对象
+在IE7中，以下属性也可以触发元素的haslayout
+    min-height: 任意值
+    min-width: 任意值
+    max-height: 除none 外任意值
+    max-width: 除none 外任意值
+    overflow: 除visible外任意值，仅用于块级元素
+    overflow-x: 除visible 外任意值，仅用于块级元素
+    overflow-y: 除visible 外任意值，仅用于块级元素
+    position: fixed
 </code></pre>
       
 
@@ -300,6 +252,17 @@ var _hmt = _hmt || [];
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/css//" class="article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -349,7 +312,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yinzhonghao123.github.io/浏览器兼容性.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yinzhonghao123.github.io/4b8b97c0.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -363,18 +326,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/属性描述符.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/c5a97815.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          属性描述符
+          BFC
         
       </div>
     </a>
   
   
-    <a href="/js模块化.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js模块化</div>
+    <a href="/fa8505ef.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">重绘&amp;重排</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -413,7 +376,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://yinzhonghao123.github.io/浏览器兼容性.html",
+  id: "https://yinzhonghao123.github.io/4b8b97c0.html",
   owner: 'yinzhonghao123',
   repo: 'yinzhonghao123.github.io',
   oauth: {
