@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-19T10:49:15.651Z</updated>
+  <updated>2018-03-19T10:54:21.653Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -21,12 +21,11 @@
     <link href="https://yinzhonghao123.github.io/4e6bf8ed.html"/>
     <id>https://yinzhonghao123.github.io/4e6bf8ed.html</id>
     <published>2018-03-19T10:27:41.000Z</published>
-    <updated>2018-03-19T10:49:15.651Z</updated>
+    <updated>2018-03-19T10:54:21.653Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;﻿## &lt;strong&gt;理解ES&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
+      &lt;h2 id=&quot;理解ES&quot;&gt;&lt;a href=&quot;#理解ES&quot; class=&quot;headerlink&quot; title=&quot;理解ES&quot;&gt;&lt;/a&gt;&lt;strong&gt;理解ES&lt;/strong&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;全称: ECMAScript&lt;/li&gt;
 &lt;li&gt;js语言的规范&lt;/li&gt;
 &lt;li&gt;我们用的js是它的实现&lt;/li&gt;
