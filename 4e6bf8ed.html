@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://yinzhonghao123.github.io/4e6bf8ed.html">
 <meta property="og:site_name" content="未卜的博客">
 <meta property="og:description" content="理解ES 全称: ECMAScript js语言的规范 我们用的js是它的实现 js的组成 ECMAScript(js基础) 扩展–&amp;gt;浏览器端 BOM DOM   扩展–&amp;gt;服务器端 Node.js">
-<meta property="og:updated_time" content="2018-03-19T11:10:06.053Z">
+<meta property="og:updated_time" content="2018-03-19T11:12:13.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES5 ES6 ES7">
 <meta name="twitter:description" content="理解ES 全称: ECMAScript js语言的规范 我们用的js是它的实现 js的组成 ECMAScript(js基础) 扩展–&amp;gt;浏览器端 BOM DOM   扩展–&amp;gt;服务器端 Node.js">
@@ -342,9 +342,6 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 </li>
-</ul>
-</blockquote>
-<ul>
 <li>数组<ul>
 <li>Array.from(v) : 将伪数组对象或可遍历对象转换为真数组</li>
 <li>Array.of(v1, v2, v3) : 将一系列值转换成数组</li>
@@ -391,6 +388,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
+</blockquote>
 <blockquote>
 <p>4.set/Map容器结构</p>
 <ul>
@@ -432,17 +430,20 @@ var _hmt = _hmt || [];
 <li>解决<code>回调地狱</code>(回调函数的层层嵌套, 编码是不断向右扩展, 阅读性很差)</li>
 <li>能以同步编码的方式实现异步调用</li>
 <li>在es6之前原生的js中是没这种实现的, 一些第三方框架(jQuery)实现了promise</li>
-<li>ES6中定义实现API:<br><em>// 1. 创建promise对象
-</em>var promise = new Promise(function(resolve, reject){<ul>
+<li>ES6中定义实现API:<br>*// 1. 创建promise对象<ul>
+<li>var promise = new Promise(function(resolve, reject){</li>
 <li>// 做异步的操作</li>
 <li>if(成功) { // 调用成功的回调</li>
 <li>resolve(result);</li>
 <li>} else { // 调用失败的回调</li>
 <li>reject(errorMsg);</li>
-<li>}<br><em>})
-</em>// 2. 调用promise对象的then()<br>*promise.then(function(</li>
+<li>}</li>
+<li>})</li>
+<li>// 2. 调用promise对象的then()</li>
+<li>promise.then(function(</li>
 <li>result =&gt; console.log(result),</li>
-<li>errorMsg =&gt; alert(errorMsg)<br>*))</li>
+<li>errorMsg =&gt; alert(errorMsg)</li>
+<li>))</li>
 </ul>
 </li>
 </ul>
