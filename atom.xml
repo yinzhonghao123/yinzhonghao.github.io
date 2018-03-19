@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-17T07:55:11.140Z</updated>
+  <updated>2018-03-19T10:30:28.888Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES5 ES6 ES7</title>
+    <link href="https://yinzhonghao123.github.io/4e6bf8ed.html"/>
+    <id>https://yinzhonghao123.github.io/4e6bf8ed.html</id>
+    <published>2018-03-19T10:27:41.000Z</published>
+    <updated>2018-03-19T10:30:28.888Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt; 
+&lt;p&gt;﻿## &lt;strong&gt;理解ES&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;全称:
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>BFC</title>
