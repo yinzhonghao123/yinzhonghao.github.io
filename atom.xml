@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-19T10:35:30.607Z</updated>
+  <updated>2018-03-19T10:37:42.420Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -21,20 +21,29 @@
     <link href="https://yinzhonghao123.github.io/4e6bf8ed.html"/>
     <id>https://yinzhonghao123.github.io/4e6bf8ed.html</id>
     <published>2018-03-19T10:27:41.000Z</published>
-    <updated>2018-03-19T10:35:30.607Z</updated>
+    <updated>2018-03-19T10:37:42.420Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt; 
-&lt;p&gt;﻿## &lt;strong&gt;理解ES&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;﻿## &lt;strong&gt;理解ES&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;全称:
-        
-      
+&lt;li&gt;全称: ECMAScript&lt;/li&gt;
+&lt;li&gt;js语言的规范&lt;/li&gt;
+&lt;li&gt;我们用的js是它的实现&lt;/li&gt;
+&lt;li&gt;js的组成&lt;ul&gt;
+&lt;li&gt;ECMAScript(js基础)&lt;/li&gt;
+&lt;li&gt;扩展–&amp;gt;浏览器端&lt;ul&gt;
+&lt;li&gt;BOM&lt;/li&gt;
+&lt;li&gt;DOM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;扩展–&amp;gt;服务器端&lt;ul&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
