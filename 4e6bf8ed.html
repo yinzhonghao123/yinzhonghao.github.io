@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://yinzhonghao123.github.io/4e6bf8ed.html">
 <meta property="og:site_name" content="未卜的博客">
 <meta property="og:description" content="理解ES 全称: ECMAScript js语言的规范 我们用的js是它的实现 js的组成 ECMAScript(js基础) 扩展–&amp;gt;浏览器端 BOM DOM   扩展–&amp;gt;服务器端 Node.js">
-<meta property="og:updated_time" content="2018-03-19T11:02:21.090Z">
+<meta property="og:updated_time" content="2018-03-19T11:04:32.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES5 ES6 ES7">
 <meta name="twitter:description" content="理解ES 全称: ECMAScript js语言的规范 我们用的js是它的实现 js的组成 ECMAScript(js基础) 扩展–&amp;gt;浏览器端 BOM DOM   扩展–&amp;gt;服务器端 Node.js">
@@ -325,40 +325,49 @@ var _hmt = _hmt || [];
 <li>repeat(count) : 重复指定次数</li>
 </ul>
 </li>
+<li>对象<ul>
+<li><strong>简化的对象写法</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">      let name = &apos;Tom&apos;;</span><br><span class="line">      let age = 12;</span><br><span class="line">      let person = &#123;</span><br><span class="line">          name,</span><br><span class="line">          age,</span><br><span class="line">          setName (name) &#123;</span><br><span class="line">              this.name = name;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">  ```         </span><br><span class="line">  * `Object.assign(target, source1, source2..) `: 将源对象的属性复制到目标对象上</span><br><span class="line">  * Object.is(v1, v2) : 判断2个数据是否完全相等</span><br><span class="line">  * __proto__属性 : 可以操作隐式原型属性</span><br><span class="line">* 数组</span><br><span class="line">  * Array.from(v) : 将伪数组对象或可遍历对象转换为真数组</span><br><span class="line">  * Array.of(v1, v2, v3) : 将一系列值转换成数组</span><br><span class="line">  * find(function(value, index, arr)&#123;return true&#125;) : 找出第一个满足条件返回true的元素</span><br><span class="line">  * findIndex(function(value, index, arr)&#123;return true&#125;) : 找出第一个满足条件返回true的元素下标</span><br><span class="line">* 函数</span><br><span class="line">  * **箭头函数**</span><br><span class="line">    * 用来定义匿名函数</span><br><span class="line">    * 基本语法:</span><br><span class="line">      * 没有参数: `() =&gt; console.log(&apos;xxxx&apos;)`</span><br><span class="line">      * 一个参数:` i =&gt; i + 2`</span><br><span class="line">      * 大于一个参数: `(i, j) =&gt; i + j`</span><br><span class="line">      * 不想return用大括号&#123;&#125; 默认返回结果</span><br><span class="line">      * 函数体如果有多个语句, 需要用&#123;&#125;包围</span><br><span class="line">      * 使用场景: 多用来定义回调函数</span><br><span class="line">    * **形参的默认值**</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
 </ul>
 </blockquote>
-<ul>
-<li><p>对象</p>
-<ul>
-<li><p><strong>简化的对象写法</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">      let name = &apos;Tom&apos;;</span><br><span class="line">      let age = 12;</span><br><span class="line">      let person = &#123;</span><br><span class="line">          name,</span><br><span class="line">          age,</span><br><span class="line">          setName (name) &#123;</span><br><span class="line">              this.name = name;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">  ```         </span><br><span class="line">  &gt;</span><br><span class="line">  * `Object.assign(target, source1, source2..) `: 将源对象的属性复制到目标对象上</span><br><span class="line">  * Object.is(v1, v2) : 判断2个数据是否完全相等</span><br><span class="line">  * __proto__属性 : 可以操作隐式原型属性</span><br><span class="line"> </span><br><span class="line">* 数组</span><br><span class="line">  * Array.from(v) : 将伪数组对象或可遍历对象转换为真数组</span><br><span class="line">  * Array.of(v1, v2, v3) : 将一系列值转换成数组</span><br><span class="line">  * find(function(value, index, arr)&#123;return true&#125;) : 找出第一个满足条件返回true的元素</span><br><span class="line">  * findIndex(function(value, index, arr)&#123;return true&#125;) : 找出第一个满足条件返回true的元素下标</span><br><span class="line">* 函数</span><br><span class="line">  * **箭头函数**</span><br><span class="line">    * 用来定义匿名函数</span><br><span class="line">    * 基本语法:</span><br><span class="line">      * 没有参数: `() =&gt; console.log(&apos;xxxx&apos;)`</span><br><span class="line">      * 一个参数:` i =&gt; i + 2`</span><br><span class="line">      * 大于一个参数: `(i, j) =&gt; i + j`</span><br><span class="line">      * 不想return用大括号&#123;&#125; 默认返回结果</span><br><span class="line">      * 函数体如果有多个语句, 需要用&#123;&#125;包围</span><br><span class="line">      * 使用场景: 多用来定义回调函数</span><br><span class="line">    * **形参的默认值**</span><br></pre></td></tr></table></figure>
-<pre><code>function Point(x = 1,y = 2) {
-    this.x = x;
-    this.y = y;
-} 
-</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    &gt;</span><br><span class="line">  * 定义形参时指定其默认的值</span><br><span class="line">* **rest(可变)参数**</span><br><span class="line">  * 通过形参左侧的...来表达, 取代arguments的使用</span><br></pre></td></tr></table></figure>
-<pre><code>function add(...values) {
-    let sum = 0;
-        for(value of values) {
-        sum += value;
-    }
-    return sum;
-}
-</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    &gt;</span><br><span class="line">* **扩展运算符(...)**</span><br><span class="line">  * 可以分解出数组或对象中的数据</span><br></pre></td></tr></table></figure>
-<pre><code>let arr1 = [1,3,5];
-let arr2 = [2,...arr1,6];
-arr2.push(...arr1);
-</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">&gt;4.set/Map容器结构</span><br><span class="line">  * 容器: 能保存多个数据的对象, 同时必须具备操作内部数据的方法</span><br><span class="line">  * 任意对象都可以作为容器使用, 但有的对象不太适合作为容器使用(如函数)</span><br><span class="line">  * **Set的特点**: 保存多个value, value是不重复 ====&gt;数组元素去重</span><br><span class="line">  * **Map的特点**: 保存多个key--value, key是不重复, value是可以重复的</span><br><span class="line">  * API</span><br><span class="line">    * Set()/Set(arr) //arr是一维数组</span><br><span class="line">    * add(value)</span><br><span class="line">    * delete(value)</span><br><span class="line">    * clear();</span><br><span class="line">    * has(value)</span><br><span class="line">    * size</span><br><span class="line">    *</span><br><span class="line">    * Map()/Map(arr) //arr是二维数组</span><br><span class="line">    * set(key, value)</span><br><span class="line">    * delete(key)</span><br><span class="line">    * clear()</span><br><span class="line">    * has(key)</span><br><span class="line">    * size</span><br><span class="line"> </span><br><span class="line">&gt;5.for--of循环</span><br><span class="line">  * 可以遍历任何容器</span><br><span class="line">  * 数组/伪数组   通过$(&quot;&quot;)获得jQuery对象</span><br><span class="line">  * 对象</span><br><span class="line">  * 伪/类对象</span><br><span class="line">  * 字符串</span><br><span class="line">  * 可迭代的对象</span><br><span class="line"> </span><br><span class="line">&gt;6. **Promise**</span><br><span class="line">  * 解决`回调地狱`(回调函数的层层嵌套, 编码是不断向右扩展, 阅读性很差)</span><br><span class="line">  * 能以同步编码的方式实现异步调用</span><br><span class="line">  * 在es6之前原生的js中是没这种实现的, 一些第三方框架(jQuery)实现了promise</span><br><span class="line">  * ES6中定义实现API:</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>// 1. 创建promise对象<br>var promise = new Promise(function(resolve, reject){<br>  // 做异步的操作<br>  if(成功) { // 调用成功的回调</p>
-<pre><code>resolve(result);
-</code></pre><p>  } else { // 调用失败的回调</p>
-<pre><code>reject(errorMsg);
-</code></pre><p>  }<br>})<br>// 2. 调用promise对象的then()<br>promise.then(function(<br>  result =&gt; console.log(result),<br>  errorMsg =&gt; alert(errorMsg)<br>))<br><code>`</code></p>
-</li>
-</ul>
-<blockquote>
+<pre><code>        function Point(x = 1,y = 2) {
+            this.x = x;
+            this.y = y;
+        } 
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  * 定义形参时指定其默认的值</span><br><span class="line">* **rest(可变)参数**</span><br><span class="line">  * 通过形参左侧的...来表达, 取代arguments的使用</span><br></pre></td></tr></table></figure>
+
+        function add(...values) {
+            let sum = 0;
+                for(value of values) {
+                sum += value;
+            }
+            return sum;
+        }
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* **扩展运算符(...)**</span><br><span class="line">  * 可以分解出数组或对象中的数据</span><br></pre></td></tr></table></figure>
+
+        let arr1 = [1,3,5];
+        let arr2 = [2,...arr1,6];
+        arr2.push(...arr1);
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">&gt;4.set/Map容器结构</span><br><span class="line">  * 容器: 能保存多个数据的对象, 同时必须具备操作内部数据的方法</span><br><span class="line">  * 任意对象都可以作为容器使用, 但有的对象不太适合作为容器使用(如函数)</span><br><span class="line">  * **Set的特点**: 保存多个value, value是不重复 ====&gt;数组元素去重</span><br><span class="line">  * **Map的特点**: 保存多个key--value, key是不重复, value是可以重复的</span><br><span class="line">  * API</span><br><span class="line">    * Set()/Set(arr) //arr是一维数组</span><br><span class="line">    * add(value)</span><br><span class="line">    * delete(value)</span><br><span class="line">    * clear();</span><br><span class="line">    * has(value)</span><br><span class="line">    * size</span><br><span class="line">    *</span><br><span class="line">    * Map()/Map(arr) //arr是二维数组</span><br><span class="line">    * set(key, value)</span><br><span class="line">    * delete(key)</span><br><span class="line">    * clear()</span><br><span class="line">    * has(key)</span><br><span class="line">    * size</span><br><span class="line"> </span><br><span class="line">&gt;5.for--of循环</span><br><span class="line">  * 可以遍历任何容器</span><br><span class="line">  * 数组/伪数组   通过$(&quot;&quot;)获得jQuery对象</span><br><span class="line">  * 对象</span><br><span class="line">  * 伪/类对象</span><br><span class="line">  * 字符串</span><br><span class="line">  * 可迭代的对象</span><br><span class="line"> </span><br><span class="line">&gt;6. **Promise**</span><br><span class="line">  * 解决`回调地狱`(回调函数的层层嵌套, 编码是不断向右扩展, 阅读性很差)</span><br><span class="line">  * 能以同步编码的方式实现异步调用</span><br><span class="line">  * 在es6之前原生的js中是没这种实现的, 一些第三方框架(jQuery)实现了promise</span><br><span class="line">  * ES6中定义实现API:</span><br></pre></td></tr></table></figure>
+
+// 1. 创建promise对象
+var promise = new Promise(function(resolve, reject){
+  // 做异步的操作
+  if(成功) { // 调用成功的回调
+    resolve(result);
+  } else { // 调用失败的回调
+    reject(errorMsg);
+  }
+})
+// 2. 调用promise对象的then()
+promise.then(function(
+  result =&gt; console.log(result),
+  errorMsg =&gt; alert(errorMsg)
+))
+```
+</code></pre><blockquote>
 <p>7.class类</p>
 <ul>
 <li>用 class 定义一类</li>
