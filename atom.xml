@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-20T02:13:41.048Z</updated>
+  <updated>2018-03-20T06:34:52.276Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yinzhonghao123.github.io/fdff8ae1.html"/>
     <id>https://yinzhonghao123.github.io/fdff8ae1.html</id>
     <published>2018-03-20T02:07:10.000Z</published>
-    <updated>2018-03-20T02:13:41.048Z</updated>
+    <updated>2018-03-20T06:34:52.276Z</updated>
     
     <summary type="html">
     
@@ -30,6 +30,8 @@
     </summary>
     
     
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
   </entry>
   
   <entry>
@@ -37,7 +39,7 @@
     <link href="https://yinzhonghao123.github.io/4e6bf8ed.html"/>
     <id>https://yinzhonghao123.github.io/4e6bf8ed.html</id>
     <published>2018-03-19T10:27:41.000Z</published>
-    <updated>2018-03-19T11:12:13.478Z</updated>
+    <updated>2018-03-20T06:34:52.272Z</updated>
     
     <summary type="html">
     
@@ -63,6 +65,14 @@
     </summary>
     
     
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
+      <category term="es5" scheme="https://yinzhonghao123.github.io/tags/es5/"/>
+    
+      <category term="es6" scheme="https://yinzhonghao123.github.io/tags/es6/"/>
+    
+      <category term="es7" scheme="https://yinzhonghao123.github.io/tags/es7/"/>
+    
   </entry>
   
   <entry>
@@ -70,7 +80,7 @@
     <link href="https://yinzhonghao123.github.io/c5a97815.html"/>
     <id>https://yinzhonghao123.github.io/c5a97815.html</id>
     <published>2018-03-13T02:15:42.000Z</published>
-    <updated>2018-03-17T07:55:11.140Z</updated>
+    <updated>2018-03-20T06:34:52.253Z</updated>
     
     <summary type="html">
     
@@ -96,6 +106,8 @@ Formatting context 　　
       <category term="css" scheme="https://yinzhonghao123.github.io/categories/css/"/>
     
     
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
   </entry>
   
   <entry>
@@ -103,7 +115,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/4b8b97c0.html"/>
     <id>https://yinzhonghao123.github.io/4b8b97c0.html</id>
     <published>2018-03-13T02:14:51.000Z</published>
-    <updated>2018-03-17T07:55:11.142Z</updated>
+    <updated>2018-03-20T06:34:52.258Z</updated>
     
     <summary type="html">
     
@@ -120,6 +132,8 @@ Formatting context 　　
       <category term="css" scheme="https://yinzhonghao123.github.io/categories/css/"/>
     
     
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
   </entry>
   
   <entry>
@@ -127,7 +141,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/fa8505ef.html"/>
     <id>https://yinzhonghao123.github.io/fa8505ef.html</id>
     <published>2018-03-13T02:07:27.000Z</published>
-    <updated>2018-03-17T07:55:11.147Z</updated>
+    <updated>2018-03-20T06:34:52.265Z</updated>
     
     <summary type="html">
     
@@ -140,6 +154,10 @@ Formatting context 　　
       <category term="css" scheme="https://yinzhonghao123.github.io/categories/css/"/>
     
     
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
+      <category term="性能" scheme="https://yinzhonghao123.github.io/tags/%E6%80%A7%E8%83%BD/"/>
+    
   </entry>
   
   <entry>
@@ -147,7 +165,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/7130c1f7.html"/>
     <id>https://yinzhonghao123.github.io/7130c1f7.html</id>
     <published>2018-03-13T01:57:39.000Z</published>
-    <updated>2018-03-17T07:55:11.144Z</updated>
+    <updated>2018-03-20T06:34:52.270Z</updated>
     
     <summary type="html">
     
@@ -160,6 +178,8 @@ Formatting context 　　
       <category term="js" scheme="https://yinzhonghao123.github.io/categories/js/"/>
     
     
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
   </entry>
   
   <entry>
@@ -167,7 +187,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/e475da6d.html"/>
     <id>https://yinzhonghao123.github.io/e475da6d.html</id>
     <published>2018-03-13T01:53:19.000Z</published>
-    <updated>2018-03-17T07:55:11.144Z</updated>
+    <updated>2018-03-20T06:34:52.256Z</updated>
     
     <summary type="html">
     
@@ -178,6 +198,10 @@ Formatting context 　　
     </summary>
     
     
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
   </entry>
   
   <entry>
@@ -185,7 +209,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/7b21deb9.html"/>
     <id>https://yinzhonghao123.github.io/7b21deb9.html</id>
     <published>2018-03-09T10:15:43.000Z</published>
-    <updated>2018-03-17T07:55:11.143Z</updated>
+    <updated>2018-03-20T06:34:52.263Z</updated>
     
     <summary type="html">
     
@@ -208,6 +232,12 @@ Formatting context 　　
       <category term="js" scheme="https://yinzhonghao123.github.io/categories/js/"/>
     
     
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
+      <category term="es5" scheme="https://yinzhonghao123.github.io/tags/es5/"/>
+    
+      <category term="es6" scheme="https://yinzhonghao123.github.io/tags/es6/"/>
+    
   </entry>
   
   <entry>
@@ -215,7 +245,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/1023f277.html"/>
     <id>https://yinzhonghao123.github.io/1023f277.html</id>
     <published>2018-03-09T08:50:10.000Z</published>
-    <updated>2018-03-17T07:55:11.141Z</updated>
+    <updated>2018-03-20T06:32:06.814Z</updated>
     
     <summary type="html">
     
@@ -226,6 +256,10 @@ Formatting context 　　
       <category term="css" scheme="https://yinzhonghao123.github.io/categories/css/"/>
     
     
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
+      <category term="css3" scheme="https://yinzhonghao123.github.io/tags/css3/"/>
+    
   </entry>
   
   <entry>
@@ -233,7 +267,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/623e7efa.html"/>
     <id>https://yinzhonghao123.github.io/623e7efa.html</id>
     <published>2018-03-09T08:28:40.000Z</published>
-    <updated>2018-03-17T07:55:11.146Z</updated>
+    <updated>2018-03-20T06:34:52.267Z</updated>
     
     <summary type="html">
     
@@ -244,6 +278,10 @@ Formatting context 　　
       <category term="js" scheme="https://yinzhonghao123.github.io/categories/js/"/>
     
     
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
+      <category term="vue" scheme="https://yinzhonghao123.github.io/tags/vue/"/>
+    
   </entry>
   
   <entry>
@@ -251,7 +289,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/27adbae0.html"/>
     <id>https://yinzhonghao123.github.io/27adbae0.html</id>
     <published>2018-03-09T07:42:07.000Z</published>
-    <updated>2018-03-17T07:55:11.142Z</updated>
+    <updated>2018-03-20T06:34:52.274Z</updated>
     
     <summary type="html">
     
@@ -262,6 +300,8 @@ Formatting context 　　
       <category term="js" scheme="https://yinzhonghao123.github.io/categories/js/"/>
     
     
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
   </entry>
   
   <entry>
@@ -269,7 +309,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/a3efbd8f.html"/>
     <id>https://yinzhonghao123.github.io/a3efbd8f.html</id>
     <published>2018-03-09T00:32:27.000Z</published>
-    <updated>2018-03-17T07:55:11.143Z</updated>
+    <updated>2018-03-20T06:34:52.260Z</updated>
     
     <summary type="html">
     
@@ -278,6 +318,8 @@ Formatting context 　　
     
     </summary>
     
+    
+      <category term="随笔" scheme="https://yinzhonghao123.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

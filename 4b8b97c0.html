@@ -10,12 +10,13 @@
   <title>haslayout | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="haslayout">
 <meta property="og:url" content="https://yinzhonghao123.github.io/4b8b97c0.html">
 <meta property="og:site_name" content="未卜的博客">
 <meta property="og:description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
-<meta property="og:updated_time" content="2018-03-17T07:55:11.142Z">
+<meta property="og:updated_time" content="2018-03-20T06:34:52.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="haslayout">
 <meta name="twitter:description" content="什么是haslayoutlayout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算， 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。  必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性， 因此has">
@@ -70,6 +71,8 @@ var _hmt = _hmt || [];
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives">随笔</a></li>
+	        
+				<li><a href="/tags">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -128,6 +131,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -141,12 +146,14 @@ var _hmt = _hmt || [];
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -251,6 +258,17 @@ writing-mode: tb-rl
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -490,6 +508,42 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es5</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es7</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">性能</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

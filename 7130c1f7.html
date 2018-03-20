@@ -10,12 +10,13 @@
   <title>属性描述符 | 未卜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="对象属性的扩展使用.的形式动态添加（不可指定属性描述符） 使用Object.defineProperty的形式来添加（可以指定属性描述符）">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="属性描述符">
 <meta property="og:url" content="https://yinzhonghao123.github.io/7130c1f7.html">
 <meta property="og:site_name" content="未卜的博客">
 <meta property="og:description" content="对象属性的扩展使用.的形式动态添加（不可指定属性描述符） 使用Object.defineProperty的形式来添加（可以指定属性描述符）">
-<meta property="og:updated_time" content="2018-03-17T07:55:11.144Z">
+<meta property="og:updated_time" content="2018-03-20T06:34:52.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="属性描述符">
 <meta name="twitter:description" content="对象属性的扩展使用.的形式动态添加（不可指定属性描述符） 使用Object.defineProperty的形式来添加（可以指定属性描述符）">
@@ -70,6 +71,8 @@ var _hmt = _hmt || [];
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives">随笔</a></li>
+	        
+				<li><a href="/tags">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -128,6 +131,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -141,12 +146,14 @@ var _hmt = _hmt || [];
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -296,6 +303,17 @@ set 方法控制着属性的赋值操作
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -535,6 +553,42 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es5</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es7</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">性能</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
