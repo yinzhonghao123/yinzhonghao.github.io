@@ -454,6 +454,7 @@ body {
 }
 .main {
   padding-bottom: 150px;
+  background: rgba(255,255,255,0.8);
 }
 .main-inner {
   margin: 0 auto;
@@ -1271,10 +1272,12 @@ pre .javascript .function {
 }
 .posts-expand {
   padding-top: 40px;
+  background: rgba(255,255,255,0.8);
 }
 @media (max-width: 767px) {
   .posts-expand {
     margin: 0 20px;
+    background: rgba(255,255,255,0.8);
   }
   .post-body pre .gutter pre {
     padding-right: 10px;
@@ -1938,7 +1941,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff222d;
+  background: #f032e9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2597,7 +2600,6 @@ body {
   background-position: center 0;
   background-size: cover;
   -webkit-background-size: cover;
-  opacity: 0.5;
 }
 video {
   position: fixed;
