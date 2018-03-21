@@ -444,24 +444,14 @@
 
       
         
-          
-            <script src="/assets/js/APlayer.min.js"> </script><p>看到好多关于盒模型的东西上个图
-&lt;!--more--&gt;
-<img src="/images/hmx.png" alt="" title="描述"></p>
-<blockquote>
-<p>盒模型包括：content，padding，border，margin
-ie下为怪异盒模型，他的宽度获取为content+padding+border
-普通浏览器的width获取值为content内容区的宽度
-可以使用box-sizing
-有两个值一个是content-box，另一个是border-box。
-当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；
-当设置为box-sizing:border-box时，将采用怪异模式解析计算；
-目前使用此属性需要前缀如下:
--webkit-box-sizing: content-box;
--moz-box-sizing: content-box;</p>
-</blockquote>
-
-          
+          <p>看到好多关于盒模型的东西上个图<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/fdff8ae1.html#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -598,407 +588,31 @@ ie下为怪异盒模型，他的宽度获取为content+padding+border
 
       
         
-          
-            <script src="/assets/js/APlayer.min.js"> </script><h2><strong>理解ES</strong></h2>
-<ol>
+          <h2 id="理解ES"><a href="#理解ES" class="headerlink" title="理解ES"></a><strong>理解ES</strong></h2><ol>
 <li>全称: ECMAScript</li>
 <li>js语言的规范</li>
 <li>我们用的js是它的实现</li>
-<li>js的组成</li>
-</ol>
-<ul>
+<li>js的组成<ul>
 <li>ECMAScript(js基础)</li>
-<li>扩展--&gt;浏览器端
-<ul>
+<li>扩展–&gt;浏览器端<ul>
 <li>BOM</li>
 <li>DOM</li>
 </ul>
 </li>
-<li>扩展--&gt;服务器端
-<ul>
+<li>扩展–&gt;服务器端<ul>
 <li>Node.js</li>
 </ul>
 </li>
 </ul>
-<p>&lt;!--more--&gt;</p>
-<h2>ES5</h2>
-<blockquote>
-<p>1.严格模式</p>
-</blockquote>
-<ul>
-<li>运行模式: 正常(混杂)模式与严格模式</li>
-<li>应用上严格式: 'strict mode';</li>
-<li>作用: (简而言之，让语言更优雅，更严谨，更合理)
-<ul>
-<li>使得Javascript在更严格的条件下运行</li>
-<li>消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为</li>
-<li>消除代码运行的一些不安全之处，保证代码运行的安全</li>
-<li>需要记住的几个变化
-<ul>
-<li>声明定义变量必须用var</li>
-<li>禁止函数中的this关键字指向全局对象</li>
-<li>创建eval作用域, 更安全</li>
-</ul>
 </li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>2.JSON对象</p>
-</blockquote>
-<ul>
-<li>本质：有特定结构的字符串</li>
-<li>why：承载数据只能是字符串，为了更清晰展示，让数据有一定结构，使用了json</li>
-<li>where ：用于服务器和前端数据交互</li>
-<li>作用: 用于在json对象/数组与js对象/数组相互转换</li>
-<li>JSON.stringify(obj/arr)
-js对象(数组)转换为json对象(数组)</li>
-<li>JSON.parse(json)
-json对象(数组)转换为js对象(数组)<br>
-*<strong>备注</strong>‘<code>[{}]’或者‘{[]}’内部{},[]不需要加&quot;&quot;，函数不能转JSON</code></li>
-</ul>
-<blockquote>
-<p>3.Object扩展</p>
-</blockquote>
-<ul>
-<li>Object.create(prototype[, descriptors]) : 创建一个新的对象
-<ul>
-<li>以指定对象为原型创建新的对象</li>
-<li>指定新的属性, 并对属性进行描述
-<ul>
-<li>value : 指定值</li>
-<li>writable : 标识当前属性值是否是可修改的, 默认为true</li>
-<li><strong>get方法</strong> : 用来得到当前属性值的回调函数,         当读取当前属性值时自动调用</li>
-<li><strong>(newvalue)方法</strong> : 用来监视当前属性值变化的回调函数,   当更新当前属性的值时(已经)自动调用</li>
-<li>vue 框架的双向数据绑定与这个类似</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Object.defineProperties(object, descriptors) : 为指定对象定义扩展多个属性</li>
-</ul>
-<blockquote>
-<p>4.Array扩展</p>
-</blockquote>
-<ul>
-<li>Array.prototype.indexOf(value) : 得到值在数组中的第一个下标</li>
-<li>Array.prototype.lastIndexOf(value) : 得到值在数组中的最后一个下标</li>
-<li><strong>Array.prototype.forEach(function(item, index){}) : 遍历数组</strong></li>
-<li>when：遍历数组某一个元素时，调用回调函数 ，将元素本省和下标传进来</li>
-<li>返回符合要求的数组项，组装成新数组返回</li>
-<li><strong>Array.prototype.map(function(item, index){ return xxx}) : 遍历数组返回一个原来长度的新数组</strong></li>
-<li><strong>Array.prototype.filter(function(item, index){return true/false}) : 遍历过滤出一个为true的子数组</strong></li>
-</ul>
-<blockquote>
-<p>5.Function扩展</p>
-</blockquote>
-<ul>
-<li>Function.prototype.bind(obj)
-<ul>
-<li>将函数内的this绑定为obj, 并将函数返回</li>
-</ul>
-</li>
-<li>面试题: 区别bind()与call()和apply()?
-<ul>
-<li>fn.call(obj)和fn.call(obj) : 指定函数中的this,第二个参数不同，call参数是逗号隔开，apply是数组</li>
-<li>fn.bind(obj) : 将函数内的this绑定为obj, 并返回函数，call和apply都是调用函数</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>6.Date扩展</p>
-</blockquote>
-<ul>
-<li>Date.now() : 得到当前时间值</li>
-</ul>
-<h2>ES6</h2>
-<blockquote>
-<p>1.2个新的关键字</p>
-</blockquote>
-<ul>
-<li>let/const</li>
-<li>块作用域</li>
-<li>没有变量提升</li>
-<li>不能重复定义</li>
-<li>值不可变</li>
-</ul>
-<blockquote>
-<p>2.变量的解构赋值</p>
-</blockquote>
-<ul>
-<li>将包含多个数据的对象(数组)一次性结构出来赋值给多个变量
-*let {n, a} = {n:'tom', a:12}
-*consle.log({n, a} )</li>
-<li>数据源: 对象/数组</li>
-<li>目标: {a, b}/[a, b]</li>
-<li>用途
-<ul>
-<li>给多个形参赋值</li>
-<li>交换2个变量的值</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>3.各种数据类型的扩展</p>
-</blockquote>
-<ul>
-<li>字符串
-<ul>
-<li><strong>模板字符串</strong>
-<ul>
-<li>作用: 简化字符串的拼接</li>
-<li>模板字符串必须用``</li>
-<li>变化的部分使用${xxx}定义</li>
-<li></li>
-</ul>
-</li>
-<li>contains(str) : 判断是否包含指定的字符串</li>
-<li>startsWith(str) : 判断是否以指定字符串开头</li>
-<li>endsWith(str) : 判断是否以指定字符串结尾</li>
-<li>repeat(count) : 重复指定次数</li>
-</ul>
-</li>
-<li>对象
-<ul>
-<li><strong>简化的对象写法</strong>
-<ul>
-<li><code>Object.assign(target, source1, source2..)</code>: 将源对象的属性复制到目标对象上</li>
-<li>Object.is(v1, v2) : 判断2个数据是否完全相等</li>
-<li>__proto__属性 : 可以操作隐式原型属性
-*let name = 'Tom';
-*let age = 12;
-*let person = {
-<ul>
-<li>name,</li>
-<li>age,</li>
-<li>setName (name) {</li>
-<li>
-<pre><code>   this.name = name;
-</code></pre>
-</li>
-<li>}
-*};</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>数组
-<ul>
-<li>Array.from(v) : 将伪数组对象或可遍历对象转换为真数组</li>
-<li>Array.of(v1, v2, v3) : 将一系列值转换成数组</li>
-<li>find(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素</li>
-<li>findIndex(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素下标</li>
-</ul>
-</li>
-<li>函数
-<ul>
-<li><strong>箭头函数</strong>
-<ul>
-<li>用来定义匿名函数</li>
-<li>基本语法:
-<ul>
-<li>没有参数: <code>() =&gt; console.log('xxxx')</code></li>
-<li>一个参数:<code>i =&gt; i + 2</code></li>
-<li>大于一个参数: <code>(i, j) =&gt; i + j</code></li>
-<li>不想return用大括号{} 默认返回结果</li>
-<li>函数体如果有多个语句, 需要用{}包围</li>
-<li>使用场景: 多用来定义回调函数</li>
-</ul>
-</li>
-<li><strong>形参的默认值</strong>
-*function Point(x = 1,y = 2) {
-<ul>
-<li>this.x = x;</li>
-<li>this.y = y;
-*}</li>
-</ul>
-</li>
-<li>定义形参时指定其默认的值</li>
-</ul>
-</li>
-<li><strong>rest(可变)参数</strong>
-<ul>
-<li>通过形参左侧的...来表达, 取代arguments的使用
-*function add(...values) {
-<ul>
-<li>let sum = 0;</li>
-<li>
-<pre><code>   for(value of values) {
-</code></pre>
-</li>
-<li>
-<pre><code>   sum += value;
-</code></pre>
-</li>
-<li>}</li>
-<li>return sum;
-*}</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>扩展运算符(...)</strong>
-<ul>
-<li>可以分解出数组或对象中的数据
-*let arr1 = [1,3,5];
-*let arr2 = [2,...arr1,6];
-*arr2.push(...arr1);</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>4.set/Map容器结构</p>
-</blockquote>
-<ul>
-<li>容器: 能保存多个数据的对象, 同时必须具备操作内部数据的方法</li>
-<li>任意对象都可以作为容器使用, 但有的对象不太适合作为容器使用(如函数)</li>
-<li><strong>Set的特点</strong>: 保存多个value, value是不重复 ====&gt;数组元素去重</li>
-<li><strong>Map的特点</strong>: 保存多个key--value, key是不重复, value是可以重复的</li>
-<li>API
-<ul>
-<li>Set()/Set(arr) //arr是一维数组</li>
-<li>add(value)</li>
-<li>delete(value)</li>
-<li>clear();</li>
-<li>has(value)</li>
-<li>size</li>
-<li></li>
-<li>Map()/Map(arr) //arr是二维数组</li>
-<li>set(key, value)</li>
-<li>delete(key)</li>
-<li>clear()</li>
-<li>has(key)</li>
-<li>size</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>5.for--of循环</p>
-</blockquote>
-<ul>
-<li>可以遍历任何容器</li>
-<li>数组/伪数组   通过$(&quot;&quot;)获得jQuery对象</li>
-<li>对象</li>
-<li>伪/类对象</li>
-<li>字符串</li>
-<li>可迭代的对象</li>
-</ul>
-<blockquote>
-<ol start="6">
-<li><strong>Promise</strong></li>
 </ol>
-</blockquote>
-<ul>
-<li>解决<code>回调地狱</code>(回调函数的层层嵌套, 编码是不断向右扩展, 阅读性很差)</li>
-<li>能以同步编码的方式实现异步调用</li>
-<li>在es6之前原生的js中是没这种实现的, 一些第三方框架(jQuery)实现了promise</li>
-<li>ES6中定义实现API:
-*// 1. 创建promise对象
-<ul>
-<li>var promise = new Promise(function(resolve, reject){</li>
-<li>// 做异步的操作</li>
-<li>if(成功) { // 调用成功的回调</li>
-<li>resolve(result);</li>
-<li>} else { // 调用失败的回调</li>
-<li>reject(errorMsg);</li>
-<li>}</li>
-<li>})</li>
-<li>// 2. 调用promise对象的then()</li>
-<li>promise.then(function(</li>
-<li>result =&gt; console.log(result),</li>
-<li>errorMsg =&gt; alert(errorMsg)</li>
-<li>))</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>7.class类</p>
-</blockquote>
-<ul>
-<li>用 class 定义一类</li>
-<li>用 constructor() 定义构造方法(相当于构造函数)</li>
-<li>一般方法: xxx () {}</li>
-<li>用extends来定义子类</li>
-<li>用super()来父类的构造方法</li>
-<li>方法重写: 将从父类中继承来的方法重新实现一遍</li>
-<li>js中没有方法重载(方法名相同, 但参数不同)的语法</li>
-</ul>
-<blockquote>
-<p>8.模块化</p>
-</blockquote>
-<h2>JS模块化</h2>
-<ul>
-<li>模块化的理解</li>
-<li>什么是模块?
-<ul>
-<li>将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起</li>
-<li>块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信</li>
-</ul>
-</li>
-<li>一个模块的组成
-<ul>
-<li>数据---&gt;内部的属性</li>
-<li>操作数据的行为---&gt;内部的函数</li>
-</ul>
-</li>
-<li>#####模块化
-<ul>
-<li>编码时是按照模块一个一个编码的, 整个项目就是一个模块化的项目</li>
-</ul>
-</li>
-<li>模块化的进化过程
-<ul>
-<li>#####全局function模式 :
-<ul>
-<li>编码: 全局变量/函数</li>
-<li>问题: 污染全局命名空间, 容易引起命名冲突/数据不安全</li>
-</ul>
-</li>
-<li>#####namespace模式 :
-<ul>
-<li>编码: 将数据/行为封装到对象中</li>
-<li>解决: 命名冲突(减少了全局变量)</li>
-<li>问题: 数据不安全(外部可以直接修改模块内部的数据)</li>
-</ul>
-</li>
-<li>#####IIFE模式/增强
-<ul>
-<li>IIFE : 立即调用函数表达式---&gt;匿名函数自调用</li>
-<li>编码: 将数据和行为封装到一个函数内部, 通过给window添加属性来向外暴露接口</li>
-<li>引入依赖: 通过函数形参来引入依赖模块</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2>ES7</h2>
-<ul>
-<li>指数运算符: **</li>
-<li>Array.prototype.includes(value) : 判断数组中是否包含指定value</li>
-</ul>
-<ul>
-<li><strong>区别方法的2种称谓</strong>
-<ul>
-<li>静态(工具)方法
-<ul>
-<li>Fun.xxx = function(){}</li>
-</ul>
-</li>
-<li>实例方法
-<ul>
-<li>所有实例对象 : Fun.prototype.xxx = function(){} //xxx针对Fun的所有实例对象</li>
-<li>某个实例对象 : fun.xxx = function(){} //xxx只是针对fun对象</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/4e6bf8ed.html#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1135,48 +749,20 @@ json对象(数组)转换为js对象(数组)<br>
 
       
         
-          
-            <script src="/assets/js/APlayer.min.js"> </script><h3>什么是haslayout</h3>
-<pre><code>layout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算，
+          <h3 id="什么是haslayout"><a href="#什么是haslayout" class="headerlink" title="什么是haslayout"></a>什么是haslayout</h3><pre><code>layout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算，
 以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。
 而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。
 
 必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性，
 因此haslayout属性只针对IE6和IE7。
 </code></pre>
-<p>&lt;!--more--&gt;</p>
-<h3>为什么会有haslayout</h3>
-<pre><code>理论上说，每个元素都应该控制自己的尺寸和定位，即每个元素都应该“拥有布局”，当然这只是理想状态。
-而对于早期的IE显示引擎来说，如果所有元素都“拥有布局”的话，会导致很大的性能问题。
-因此IE开发团队决定使用布局概念来减少浏览器的性能开销，即只将布局应用于实际需要的那些元素，
-所以便出现了“拥有布局”和“没有拥有布局”两种情况。
-</code></pre>
-<h3>默认拥有布局的元素</h3>
-<pre><code>html, body, table, tr, td, img, hr,
-input, select, textarea, button,
-iframe, embed, object, applet, marquee
-</code></pre>
-<h3>怎么触发haslayout</h3>
-<pre><code>float: left或right
-display: inline-block
-position: absolute
-width: 除auto外任何值
-height: 除auto外任何值
-zoom: 除normal外任何值(zoom: 1无法在IE5.0中触发haslayout)
-writing-mode: tb-rl
-
-在IE7中，以下属性也可以触发元素的haslayout
-    min-height: 任意值
-    min-width: 任意值
-    max-height: 除none 外任意值
-    max-width: 除none 外任意值
-    overflow: 除visible外任意值，仅用于块级元素
-    overflow-x: 除visible 外任意值，仅用于块级元素
-    overflow-y: 除visible 外任意值，仅用于块级元素
-    position: fixed
-</code></pre>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/4b8b97c0.html#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1313,54 +899,16 @@ writing-mode: tb-rl
 
       
         
-          
-            <script src="/assets/js/APlayer.min.js"> </script><h3>重绘(Repaint)</h3>
-<pre><code>重绘是一个元素外观的改变所触发的浏览器行为，例如改变outline、背景色等属性。浏览器会根据元素的新属性重新绘制，
+          <h3 id="重绘-Repaint"><a href="#重绘-Repaint" class="headerlink" title="重绘(Repaint)"></a>重绘(Repaint)</h3><pre><code>重绘是一个元素外观的改变所触发的浏览器行为，例如改变outline、背景色等属性。浏览器会根据元素的新属性重新绘制，
 使元素呈现新的外观。重绘不会带来重新布局，所以并不一定伴随重排。
 </code></pre>
-<p>&lt;!--more--&gt;</p>
-<h3>重排(Reflow)</h3>
-<pre><code>渲染对象在创建完成并添加到渲染树时，并不包含位置和大小信息。计算这些值的过程称为布局或重排
-
-&quot;重绘&quot;不一定需要&quot;重排&quot;，比如改变某个网页元素的颜色，就只会触发&quot;重绘&quot;，不会触发&quot;重排&quot;，因为布局没有改变。
- 但是，&quot;重排&quot;必然导致&quot;重绘&quot;，比如改变一个网页元素的位置，就会同时触发&quot;重排&quot;和&quot;重绘&quot;，因为布局改变了。
-</code></pre>
-<h3>常见的触发重排的操作</h3>
-<pre><code>Reflow 的成本比 Repaint 的成本高得多的多。DOM Tree 里的每个结点都会有 reflow 方法，
-一个结点的 reflow 很有可能导致子结点，甚至父点以及同级结点的 reflow。在一些高性能的电脑上也许还没什么，
-但是如果 reflow 发生在手机上，那么这个过程是非常痛苦和耗电的。
-
-所以，下面这些动作有很大可能会是成本比较高的。
-    当你增加、删除、修改 DOM 结点时，会导致 Reflow , Repaint。
-    当你移动 DOM 的位置
-    当你修改 CSS 样式的时候。
-    当你 Resize 窗口的时候（移动端没有这个问题）
-    当你修改网页的默认字体时。
-    获取某些属性时
-    注：display:none 会触发 reflow，而 visibility:hidden 只会触发 repaint，
-        因为没有发现位置变化。
-</code></pre>
-<h3>注意</h3>
-<pre><code>当你请求向浏览器请求一些 style信息的时候，就会让浏览器flush队列，比如：
-
-1. offsetTop, offsetLeft, offsetWidth, offsetHeight
-2. scrollTop/Left/Width/Height
-3. clientTop/Left/Width/Height
-4. width,height
-
-当你请求上面的一些属性的时候，浏览器为了给你最精确的值，需要flush队列，
-因为队列中可能会有影响到这些值的操作。即使你获取元素的布局和样式信息跟最近的布局信息差不多，
-浏览器都会强行刷新渲染队列。
-</code></pre>
-<h3>优化</h3>
-<pre><code>1.将多次改变样式属性的操作合并成一次操作
-2.将需要多次重排的元素，position属性设为absolute或fixed，
-    这样此元素就脱离了文档流，它的变化不会影响到其他元素。例如有动画效果的元素就最好设置为绝对定位。
-3. 由于display属性为none的元素不在渲染树中，对隐藏的元素操作不会引发其他元素的重排。
-    如果要对一个元素进行复杂的操作时，可以先隐藏它，操作完成后再显示。这样只在隐藏和显示时触发2次重排。
-</code></pre>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/fa8505ef.html#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1497,89 +1045,16 @@ writing-mode: tb-rl
 
       
         
-          
-            <script src="/assets/js/APlayer.min.js"> </script><pre><code>    1.event事件对象兼容
-        event=event||window.event
+          <pre><code>1.event事件对象兼容
+    event=event||window.event
 </code></pre>
-<p>&lt;!--more--&gt;</p>
-<pre><code>    2.event.x与event.y问题
-        问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；
-                Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。
-        解决方法：var myX = event.x ? event.x : event.pageX;
-                var myY = event.y ? event.y:event.pageY;
-        如果考虑第8条问题，就改用myEvent代替event即可。
-
-    3.盒模型
-        盒模型包括：content，padding，border，margin
-        ie下为怪异盒模型，他的宽度获取为content+padding+border
-        普通浏览器的width获取值为content内容区的宽度
-        可以使用box-sizing
-            有两个值一个是content-box，另一个是border-box。
-            当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；
-            当设置为box-sizing:border-box时，将采用怪异模式解析计算；
-            目前使用此属性需要前缀如下:
-                -webkit-box-sizing: content-box;
-                -moz-box-sizing: content-box;
-
-    4.input属性placeholder
-        IE8下不支持HTML5属性placeholder,可以使用插件进行解决
-
-    5.setAttribute('style','color:red;')
-        FIREFOX支持(除了IE，现在所有浏览器都支持)，IE不支持
-        解决办法：不用setAttribute('style','color:red')
-            而用object.style.cssText = ‘color:red;'(这写法也有例外)
-            最好的办法是上面种方法都用上，万无一失        
-
-    6.监听事件
-        addEventListener支持除了ie的所有浏览器
-        attachEvent支持ie的监听事件，但是他的事件必须加上on
-
-    7.移除事件
-            ie浏览器中datachEvent进行移除事件
-            其他浏览器中使用removeEventListener进行移除事件
-
-    8.取消冒泡
-        取消冒泡
-            IE浏览器中使用cancelBuble=true来取消冒泡
-            普通浏览器中使用stopPropagation来禁止冒泡
-
-    9.禁止默认行为
-        IE浏览器中使用returnValue='false'来禁止默认行为
-        普通浏览中使用preventDefault()来禁止默认行为
-
-        document.onclick=function(e){
-            var e=e||window.event;
-            if (e.preventDefault) {
-              e.preventDefault();//W3C标准
-            }else{
-              e.returnValue='false';//IE..
-            }
-        }
-
-    10.关于EVENT事件中的target：
-        //关于event事件中的target
-
-            document.onmouseover=function(e){
-                var e=e||window.event;
-                var Target=e.target||e.srcElement;//获取target的兼容写法，后面的为IE
-                var from=e.relatedTarget||e.formElement;//鼠标来的地方，同样后面的为IE...
-                var to=e.relatedTarget||e.toElement;//鼠标去的地方
-            }
-    11.鼠标滚轮滚动事件：
-            //鼠标滚轮事件
-            //火狐中的滚轮事件
-            document.addEventListener(&quot;DOMMouseScroll&quot;,function(event){
-                alert(event.detail);//若前滚的话为 -3，后滚的话为 3
-            },false)
-            //非火狐中的滚轮事件
-            document.onmousewheel=function(event){
-                alert(event.detail);//前滚：120，后滚：-120
-            }
-    12.ajax对象
-            IE浏览器中使用ActiveXObject创建ajax对象
-            普通浏览器中使用XmlHttprequest创建ajax对象</code></pre>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/e475da6d.html#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1828,7 +1303,7 @@ writing-mode: tb-rl
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.7k字</span>
+  <span class="post-count">博客全站共7.6k字</span>
 </div>
 
         

@@ -25,15 +25,7 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;看到好多关于盒模型的东西上个图
-&amp;lt;!--more--&amp;gt;
-&lt;img src=&quot;/images/hmx.png&quot; alt=&quot;&quot;
-        
-      
+      &lt;p&gt;看到好多关于盒模型的东西上个图&lt;br&gt;
     
     </summary>
     
@@ -51,15 +43,24 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h2&gt;&lt;strong&gt;理解ES&lt;/strong&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;全称:
-        
-      
+      &lt;h2 id=&quot;理解ES&quot;&gt;&lt;a href=&quot;#理解ES&quot; class=&quot;headerlink&quot; title=&quot;理解ES&quot;&gt;&lt;/a&gt;&lt;strong&gt;理解ES&lt;/strong&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;全称: ECMAScript&lt;/li&gt;
+&lt;li&gt;js语言的规范&lt;/li&gt;
+&lt;li&gt;我们用的js是它的实现&lt;/li&gt;
+&lt;li&gt;js的组成&lt;ul&gt;
+&lt;li&gt;ECMAScript(js基础)&lt;/li&gt;
+&lt;li&gt;扩展–&amp;gt;浏览器端&lt;ul&gt;
+&lt;li&gt;BOM&lt;/li&gt;
+&lt;li&gt;DOM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;扩展–&amp;gt;服务器端&lt;ul&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -83,14 +84,13 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h3&gt;什么是haslayout&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;layout是windows
-        
-      
+      &lt;h3 id=&quot;什么是haslayout&quot;&gt;&lt;a href=&quot;#什么是haslayout&quot; class=&quot;headerlink&quot; title=&quot;什么是haslayout&quot;&gt;&lt;/a&gt;什么是haslayout&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;layout是windows IE的一个私有概念，它决定了元素如何对其内容定位和尺寸计算，
+以及与其他元素的关系和相互作用。当一个元素“拥有布局”时，它会负责本身及其子元素的尺寸和定位。
+而如果一个元素“没有拥有布局”，那么它的尺寸和位置由最近的拥有布局的祖先元素控制。
+
+必须说明的是，IE8及以上浏览器使用了全新的显示引擎，已经不在使用haslayout属性，
+因此haslayout属性只针对IE6和IE7。
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -108,13 +108,9 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt;
-        
-      
+      &lt;h3 id=&quot;重绘-Repaint&quot;&gt;&lt;a href=&quot;#重绘-Repaint&quot; class=&quot;headerlink&quot; title=&quot;重绘(Repaint)&quot;&gt;&lt;/a&gt;重绘(Repaint)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;重绘是一个元素外观的改变所触发的浏览器行为，例如改变outline、背景色等属性。浏览器会根据元素的新属性重新绘制，
+使元素呈现新的外观。重绘不会带来重新布局，所以并不一定伴随重排。
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -134,14 +130,9 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;pre&gt;&lt;code&gt;    1.event事件对象兼容
-       
-        
-      
+      &lt;pre&gt;&lt;code&gt;1.event事件对象兼容
+    event=event||window.event
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -161,17 +152,19 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;ul&gt;
+      &lt;ul&gt;
 &lt;li&gt;模块化的理解&lt;/li&gt;
-&lt;li&gt;什么是模块?
-&lt;ul&gt;
-&lt;li&gt;将一个复杂的程序依据一定的规则(规范)封装成几个块(文件),
-        
-      
+&lt;li&gt;什么是模块?&lt;ul&gt;
+&lt;li&gt;将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起&lt;/li&gt;
+&lt;li&gt;块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一个模块的组成&lt;ul&gt;
+&lt;li&gt;数据—&amp;gt;内部的变量&lt;/li&gt;
+&lt;li&gt;操作数据的行为—&amp;gt;内部的函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -251,13 +244,9 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt;
-        
-      
+      &lt;h3 id=&quot;对象属性的扩展&quot;&gt;&lt;a href=&quot;#对象属性的扩展&quot; class=&quot;headerlink&quot; title=&quot;对象属性的扩展&quot;&gt;&lt;/a&gt;对象属性的扩展&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;使用.的形式动态添加（不可指定属性描述符）
+使用Object.defineProperty的形式来添加（可以指定属性描述符）
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -275,15 +264,22 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h3&gt;在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Box: CSS布局的基本单位
-   
-        
-      
+      &lt;h3 id=&quot;在解释-BFC-是什么之前，需要先介绍-Box、Formatting-Context的概念。&quot;&gt;&lt;a href=&quot;#在解释-BFC-是什么之前，需要先介绍-Box、Formatting-Context的概念。&quot; class=&quot;headerlink&quot; title=&quot;在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。&quot;&gt;&lt;/a&gt;在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;Box: CSS布局的基本单位
+    Box 是 CSS 布局的对象和基本单位， 直观点来说，就是一个页面是由很多个 Box 组成的。
+    元素的类型和 display 属性，决定了这个 Box 的类型。 不同类型的 Box， 会参与不同的 Formatting Context（一个决定如何渲染文档的容器），
+    因此Box内的元素会以不同的方式渲染。让我们看看有哪些盒子：
+        block-level box:
+            display 属性为 block, list-item, table 的元素，会生成 block-level box。并且参与 block fomatting context；
+        inline-level box:
+            display 属性为 inline, inline-block, inline-table 的元素，会生成 inline-level box。
+            并且参与 inline formatting context
+
+Formatting context 　　
+        Formatting context 是 W3C CSS2.1 规范中的一个概念。
+        它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
+        最常见的 Formatting context 有 Block fomatting context (简称BFC)
+                                    Inline formatting context (简称IFC)。
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -301,17 +297,8 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;blockquote&gt;
-&lt;p&gt;这个头像呢是因为孟二蛋才换的，看着喜庆，粗糙的表情😄
-&amp;lt;!--more--&amp;gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img
-        
-      
+      &lt;blockquote&gt;
+&lt;p&gt;这个头像呢是因为孟二蛋才换的，看着喜庆，粗糙的表情😄&lt;br&gt;
     
     </summary>
     
