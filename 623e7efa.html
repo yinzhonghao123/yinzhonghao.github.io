@@ -459,7 +459,16 @@
       
         <script src="/assets/js/APlayer.min.js"> </script><p>###解决Vue方法中setTimeout改变变量的值无效</p>
 <blockquote>
-<p>把data里的变量继承过来重新封装一下<br>    <pre><br>        <code><br>        let that = this;<br>          this.rightAnswer = false;<br>          setTimeout(function() {<br>                that.rightAnswer = true;<br>          }, 1500)<br>          </code><br>    </pre></p>
+<p>把data里的变量继承过来重新封装一下
+&lt;pre&gt;
+&lt;code&gt;
+let that = this;
+this.rightAnswer = false;
+setTimeout(function() {
+that.rightAnswer = true;
+}, 1500)
+&lt;/code&gt;
+&lt;/pre&gt;</p>
 </blockquote>
 
       
@@ -814,7 +823,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.6k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         
