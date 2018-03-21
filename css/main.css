@@ -1271,12 +1271,10 @@ pre .javascript .function {
 }
 .posts-expand {
   padding-top: 40px;
-  background: rgba(255,255,255,0.8);
 }
 @media (max-width: 767px) {
   .posts-expand {
     margin: 0 20px;
-    background: rgba(255,255,255,0.8);
   }
   .post-body pre .gutter pre {
     padding-right: 10px;
@@ -1940,7 +1938,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8c818e;
+  background: #c30e4f;
 }
 .links-of-blogroll {
   font-size: 13px;
