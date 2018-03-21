@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-20T06:34:52.276Z</updated>
+  <updated>2018-03-21T02:40:53.193Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yinzhonghao123.github.io/fdff8ae1.html"/>
     <id>https://yinzhonghao123.github.io/fdff8ae1.html</id>
     <published>2018-03-20T02:07:10.000Z</published>
-    <updated>2018-03-20T06:34:52.276Z</updated>
+    <updated>2018-03-21T02:40:53.193Z</updated>
     
     <summary type="html">
     
@@ -76,39 +76,6 @@
   </entry>
   
   <entry>
-    <title>BFC</title>
-    <link href="https://yinzhonghao123.github.io/c5a97815.html"/>
-    <id>https://yinzhonghao123.github.io/c5a97815.html</id>
-    <published>2018-03-13T02:15:42.000Z</published>
-    <updated>2018-03-20T06:37:12.803Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;在解释-BFC-是什么之前，需要先介绍-Box、Formatting-Context的概念。&quot;&gt;&lt;a href=&quot;#在解释-BFC-是什么之前，需要先介绍-Box、Formatting-Context的概念。&quot; class=&quot;headerlink&quot; title=&quot;在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。&quot;&gt;&lt;/a&gt;在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;Box: CSS布局的基本单位
-    Box 是 CSS 布局的对象和基本单位， 直观点来说，就是一个页面是由很多个 Box 组成的。
-    元素的类型和 display 属性，决定了这个 Box 的类型。 不同类型的 Box， 会参与不同的 Formatting Context（一个决定如何渲染文档的容器），
-    因此Box内的元素会以不同的方式渲染。让我们看看有哪些盒子：
-        block-level box:
-            display 属性为 block, list-item, table 的元素，会生成 block-level box。并且参与 block fomatting context；
-        inline-level box:
-            display 属性为 inline, inline-block, inline-table 的元素，会生成 inline-level box。
-            并且参与 inline formatting context
-
-Formatting context 　　
-        Formatting context 是 W3C CSS2.1 规范中的一个概念。
-        它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
-        最常见的 Formatting context 有 Block fomatting context (简称BFC)
-                                    Inline formatting context (简称IFC)。
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
     <title>haslayout</title>
     <link href="https://yinzhonghao123.github.io/4b8b97c0.html"/>
     <id>https://yinzhonghao123.github.io/4b8b97c0.html</id>
@@ -151,26 +118,6 @@ Formatting context 　　
       <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
     
       <category term="性能" scheme="https://yinzhonghao123.github.io/tags/%E6%80%A7%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>属性描述符</title>
-    <link href="https://yinzhonghao123.github.io/7130c1f7.html"/>
-    <id>https://yinzhonghao123.github.io/7130c1f7.html</id>
-    <published>2018-03-13T01:57:39.000Z</published>
-    <updated>2018-03-20T06:43:59.685Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;对象属性的扩展&quot;&gt;&lt;a href=&quot;#对象属性的扩展&quot; class=&quot;headerlink&quot; title=&quot;对象属性的扩展&quot;&gt;&lt;/a&gt;对象属性的扩展&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;使用.的形式动态添加（不可指定属性描述符）
-使用Object.defineProperty的形式来添加（可以指定属性描述符）
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
     
   </entry>
   
@@ -235,7 +182,7 @@ Formatting context 　　
     <link href="https://yinzhonghao123.github.io/1023f277.html"/>
     <id>https://yinzhonghao123.github.io/1023f277.html</id>
     <published>2018-03-09T08:50:10.000Z</published>
-    <updated>2018-03-20T06:43:59.677Z</updated>
+    <updated>2018-03-21T02:40:53.190Z</updated>
     
     <summary type="html">
     
@@ -251,11 +198,29 @@ Formatting context 　　
   </entry>
   
   <entry>
+    <title>js事件节流</title>
+    <link href="https://yinzhonghao123.github.io/27adbae0.html"/>
+    <id>https://yinzhonghao123.github.io/27adbae0.html</id>
+    <published>2017-12-09T07:42:07.000Z</published>
+    <updated>2018-03-21T02:40:53.187Z</updated>
+    
+    <summary type="html">
+    
+      js事件节流
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue中setTimeout值无效</title>
     <link href="https://yinzhonghao123.github.io/623e7efa.html"/>
     <id>https://yinzhonghao123.github.io/623e7efa.html</id>
-    <published>2018-03-09T08:28:40.000Z</published>
-    <updated>2018-03-20T06:43:59.683Z</updated>
+    <published>2017-10-09T08:28:40.000Z</published>
+    <updated>2018-03-21T02:40:53.191Z</updated>
     
     <summary type="html">
     
@@ -271,15 +236,17 @@ Formatting context 　　
   </entry>
   
   <entry>
-    <title>js事件节流</title>
-    <link href="https://yinzhonghao123.github.io/27adbae0.html"/>
-    <id>https://yinzhonghao123.github.io/27adbae0.html</id>
-    <published>2018-03-09T07:42:07.000Z</published>
-    <updated>2018-03-20T06:43:59.688Z</updated>
+    <title>属性描述符</title>
+    <link href="https://yinzhonghao123.github.io/7130c1f7.html"/>
+    <id>https://yinzhonghao123.github.io/7130c1f7.html</id>
+    <published>2017-08-13T01:57:39.000Z</published>
+    <updated>2018-03-21T02:40:53.195Z</updated>
     
     <summary type="html">
     
-      js事件节流
+      &lt;h3 id=&quot;对象属性的扩展&quot;&gt;&lt;a href=&quot;#对象属性的扩展&quot; class=&quot;headerlink&quot; title=&quot;对象属性的扩展&quot;&gt;&lt;/a&gt;对象属性的扩展&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;使用.的形式动态添加（不可指定属性描述符）
+使用Object.defineProperty的形式来添加（可以指定属性描述符）
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -289,11 +256,44 @@ Formatting context 　　
   </entry>
   
   <entry>
+    <title>BFC</title>
+    <link href="https://yinzhonghao123.github.io/c5a97815.html"/>
+    <id>https://yinzhonghao123.github.io/c5a97815.html</id>
+    <published>2017-03-13T02:15:42.000Z</published>
+    <updated>2018-03-21T02:40:53.185Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;在解释-BFC-是什么之前，需要先介绍-Box、Formatting-Context的概念。&quot;&gt;&lt;a href=&quot;#在解释-BFC-是什么之前，需要先介绍-Box、Formatting-Context的概念。&quot; class=&quot;headerlink&quot; title=&quot;在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。&quot;&gt;&lt;/a&gt;在解释 BFC 是什么之前，需要先介绍 Box、Formatting Context的概念。&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;Box: CSS布局的基本单位
+    Box 是 CSS 布局的对象和基本单位， 直观点来说，就是一个页面是由很多个 Box 组成的。
+    元素的类型和 display 属性，决定了这个 Box 的类型。 不同类型的 Box， 会参与不同的 Formatting Context（一个决定如何渲染文档的容器），
+    因此Box内的元素会以不同的方式渲染。让我们看看有哪些盒子：
+        block-level box:
+            display 属性为 block, list-item, table 的元素，会生成 block-level box。并且参与 block fomatting context；
+        inline-level box:
+            display 属性为 inline, inline-block, inline-table 的元素，会生成 inline-level box。
+            并且参与 inline formatting context
+
+Formatting context 　　
+        Formatting context 是 W3C CSS2.1 规范中的一个概念。
+        它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
+        最常见的 Formatting context 有 Block fomatting context (简称BFC)
+                                    Inline formatting context (简称IFC)。
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于头像</title>
     <link href="https://yinzhonghao123.github.io/a3efbd8f.html"/>
     <id>https://yinzhonghao123.github.io/a3efbd8f.html</id>
-    <published>2018-03-09T00:32:27.000Z</published>
-    <updated>2018-03-20T06:34:52.260Z</updated>
+    <published>2017-03-09T00:32:27.000Z</published>
+    <updated>2018-03-21T02:40:53.177Z</updated>
     
     <summary type="html">
     
