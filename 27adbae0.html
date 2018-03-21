@@ -453,7 +453,7 @@
 <blockquote>
 <p>为了解决这个问题，需要使用定时器对该函数进行节流。</p>
 </blockquote>
-<a id="more"></a> 
+<p>&lt;!-- more --&gt;</p>
 <blockquote>
 <p>函数节流背后的基本思想是：某些代码不可以在没有间断的情况下连续重复执行。</p>
 </blockquote>
@@ -479,38 +479,36 @@
 <p>时间间隔设为500ms，这表示监听鼠标的mousemove、scroll，浏览器窗口的resize等事件，事件处理函数会连续调用多次，但只在最后一次触发该事件。</p>
 </blockquote>
 <blockquote>
-<p>节流函数主体</p>
+<p>节流函数主体
+&lt;pre&gt;&lt;code&gt;
+function throttle(method, context) {<br>
+clearTimeout(method.tId);<br>
+method.tId=setTimeout(function(){<br>
+method.call(context);<br>
+},500);<br>
+}
+&lt;/code&gt;&lt;/pre&gt;</p>
 </blockquote>
-<pre><code>
-function throttle(method, context) {  
-     clearTimeout(method.tId);  
-     method.tId=setTimeout(function(){  
-         method.call(context);  
-     },500);  
- } 
-</code></pre>
-
 <blockquote>
-<p>节流调取处理函数</p>
-</blockquote>
-<pre><code>
+<p>节流调取处理函数
+&lt;pre&gt;&lt;code&gt;
 var n = 1
- function resizeHandler() {  
-     console.log(n);  
-     n++;  
- }
-</code></pre>
-
-<blockquote>
-<p>调取节流函数</p>
+function resizeHandler() {<br>
+console.log(n);<br>
+n++;<br>
+}
+&lt;/code&gt;&lt;/pre&gt;</p>
 </blockquote>
-<pre>
-<code>
-window.onresize = function(){  
-    throttle(resizeHandler, window); // 或throttle(resizeHandler);  
-}; 
-</code>
-</pre>
+<blockquote>
+<p>调取节流函数
+&lt;pre&gt;
+&lt;code&gt;
+window.onresize = function(){<br>
+throttle(resizeHandler, window); // 或throttle(resizeHandler);<br>
+};
+&lt;/code&gt;
+&lt;/pre&gt;</p>
+</blockquote>
 
       
     </div>
@@ -851,7 +849,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.6k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
         
