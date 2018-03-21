@@ -1937,7 +1937,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #00cb21;
+  background: #ffe250;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2591,7 +2591,10 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("/images/timg.jpeg");
+  background: url("/images/1-140GF94204-50.jpg") no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  -webkit-background-size: cover;
 }
 video {
   position: fixed;
