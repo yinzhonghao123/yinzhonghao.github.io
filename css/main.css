@@ -188,7 +188,7 @@ body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 2;
-  color: #555;
+  color: #333;
   background: #fff;
 }
 @media (max-width: 767px) {
@@ -278,7 +278,7 @@ p {
   margin: 0 0 20px 0;
 }
 a {
-  color: #555;
+  color: #333;
   text-decoration: none;
   outline: none;
   border-bottom: 1px solid #999;
@@ -498,7 +498,7 @@ code {
 code {
   padding: 2px 4px;
   word-wrap: break-word;
-  color: #555;
+  color: #333;
   background: #eee;
   border-radius: 3px;
   font-size: 14px;
@@ -914,7 +914,7 @@ pre .javascript .function {
 }
 .post-body .tabs ul.nav-tabs li.tab.active a {
   cursor: default;
-  color: #555;
+  color: #333;
 }
 .post-body .tabs .tab-content {
   background-color: #fff;
@@ -960,7 +960,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: #333;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1469,7 +1469,7 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #555;
+  color: #333;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
@@ -1581,7 +1581,7 @@ pre .javascript .function {
   display: block;
   line-height: 25px;
   font-size: 14px;
-  color: #555;
+  color: #333;
   border-bottom: none;
 }
 .post-nav-item a:hover {
@@ -1786,7 +1786,7 @@ pre .javascript .function {
 .sidebar a,
 .sidebar .exturl {
   color: #999;
-  border-bottom-color: #555;
+  border-bottom-color: #333;
 }
 .sidebar a:hover,
 .sidebar .exturl:hover {
@@ -1928,7 +1928,7 @@ pre .javascript .function {
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 10px;
-  border-bottom-color: #555;
+  border-bottom-color: #333;
   font-size: 13px;
 }
 .links-of-author a:before,
@@ -1940,7 +1940,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #96d77a;
+  background: #8c818e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1975,7 +1975,7 @@ pre .javascript .function {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   font-size: 14px;
-  color: #555;
+  color: #333;
 }
 .sidebar-nav li:hover {
   color: #f5f5f5;
@@ -2025,7 +2025,7 @@ pre .javascript .function {
   transition-delay: 0s;
   transition-property: all;
   color: #999;
-  border-bottom-color: #555;
+  border-bottom-color: #333;
 }
 .post-toc ol a:hover {
   color: #ccc;
@@ -2269,7 +2269,7 @@ pre .javascript .function {
   width: 10px;
   height: 10px;
   opacity: 0.5;
-  background: #555;
+  background: #333;
   border: 1px solid #fff;
   border-radius: 50%;
 }
@@ -2616,4 +2616,5 @@ video {
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+  background: rgba(255,255,255,0.8);
 }
