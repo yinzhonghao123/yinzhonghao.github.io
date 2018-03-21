@@ -281,7 +281,7 @@ a {
   color: #333;
   text-decoration: none;
   outline: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #999;
   word-wrap: break-word;
 }
 a:hover {
@@ -387,7 +387,7 @@ kbd {
 .translation {
   margin-top: -20px;
   font-size: 14px;
-  color: #000;
+  color: #999;
 }
 .scrollbar-measure {
   width: 100px;
@@ -1129,7 +1129,7 @@ pre .javascript .function {
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  color: #000;
+  color: #999;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1231,7 +1231,7 @@ pre .javascript .function {
   margin: -20px auto 15px;
   text-align: center;
   font-size: 14px;
-  color: #000;
+  color: #999;
   font-weight: bold;
   line-height: 1;
 }
@@ -1503,7 +1503,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
-  color: #000;
+  color: #999;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
@@ -1514,7 +1514,7 @@ pre .javascript .function {
   padding: 3px;
 }
 .posts-expand .post-meta .post-category-list-link {
-  color: #000;
+  color: #999;
 }
 .posts-expand .post-meta .post-description {
   font-size: 14px;
@@ -1783,7 +1783,7 @@ pre .javascript .function {
 }
 .sidebar a,
 .sidebar .exturl {
-  color: #000;
+  color: #999;
   border-bottom-color: #333;
 }
 .sidebar a:hover,
@@ -1803,7 +1803,7 @@ pre .javascript .function {
 .sidebar-inner {
   position: relative;
   padding: 20px 10px;
-  color: #000;
+  color: #999;
   text-align: center;
 }
 .site-overview-wrap {
@@ -1866,7 +1866,7 @@ pre .javascript .function {
   margin-top: 5px;
   text-align: center;
   font-size: 14px;
-  color: #000;
+  color: #999;
 }
 .site-state {
   overflow: hidden;
@@ -1938,7 +1938,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #88053e;
+  background: #ff5c67;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2022,7 +2022,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  color: #000;
+  color: #999;
   border-bottom-color: #333;
 }
 .post-toc ol a:hover {
