@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[highcharts图例控制]]></title>
+    <url>%2F87ef91f6.html</url>
+    <content type="text"><![CDATA[highcharts图表中图例的设置这个主要是控制所有图例的设置 123456789101112131415161718192021222324legend : &#123; backgroundColor : &apos;#ccc&apos; // 背景颜色 borderWidth : &apos;0&apos;, // 边框宽度 borderRadius : 0, // 边框圆角 borderColor : &apos;red&apos;, // 边框颜色 enabled : true, // 图例开关 layout : &apos;horizontal&apos; // 图例布局类型，默认horizontal 水平布局，垂直布局vertical // 图例点击后颜色 itemHiddenStyle : &#123; color : &apos;red&apos; &#125; // 鼠标放上样式 itemHoverStyle : &#123; color : &apos;red&apos; &#125; symbolPadding : 5 // 图标跟文字的间距 symbolPadding: // 图标后距 symbolRadius: // 图标圆角 symbolWidth: // 图标宽度&#125; 控制单个图例的显示和隐藏，就是默认状态为点击之后的隐藏状态 指定数据列的 visible 属性即可，示例代码： 123456789series: [&#123; name: &apos;series1&apos;, data: [], visible: true // 默认值&#125;,&#123; name: &apos;series2&apos;, data: [], visible: false // 不显示&#125;]]]></content>
+      <tags>
+        <tag>css</tag>
+        <tag>js</tag>
+        <tag>jquery</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[盒模型]]></title>
     <url>%2Ffdff8ae1.html</url>
     <content type="text"><![CDATA[看到好多关于盒模型的东西上个图 盒模型包括：content，padding，border，margin ie下为怪异盒模型，他的宽度获取为content+padding+border 普通浏览器的width获取值为content内容区的宽度 可以使用box-sizing 有两个值一个是content-box，另一个是border-box。 当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式； 当设置为box-sizing:border-box时，将采用怪异模式解析计算； 目前使用此属性需要前缀如下: -webkit-box-sizing: content-box; -moz-box-sizing: content-box;]]></content>

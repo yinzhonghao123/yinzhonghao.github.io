@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-21T02:40:53.193Z</updated>
+  <updated>2018-03-22T10:28:06.647Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>highcharts图例控制</title>
+    <link href="https://yinzhonghao123.github.io/87ef91f6.html"/>
+    <id>https://yinzhonghao123.github.io/87ef91f6.html</id>
+    <published>2018-03-22T10:18:12.000Z</published>
+    <updated>2018-03-22T10:28:06.647Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
+      <category term="jquery" scheme="https://yinzhonghao123.github.io/tags/jquery/"/>
+    
+  </entry>
   
   <entry>
     <title>盒模型</title>
