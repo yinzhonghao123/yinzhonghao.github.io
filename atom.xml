@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-22T10:28:06.647Z</updated>
+  <updated>2018-03-22T10:30:41.379Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -21,17 +21,12 @@
     <link href="https://yinzhonghao123.github.io/87ef91f6.html"/>
     <id>https://yinzhonghao123.github.io/87ef91f6.html</id>
     <published>2018-03-22T10:18:12.000Z</published>
-    <updated>2018-03-22T10:28:06.647Z</updated>
+    <updated>2018-03-22T10:30:41.379Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-        
-      
+      &lt;blockquote&gt;
+&lt;p&gt;highcharts图表中图例的设置&lt;br&gt;这个主要是控制所有图例的设置&lt;br&gt;
     
     </summary>
     
