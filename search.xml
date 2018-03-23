@@ -4,6 +4,11 @@
     <title><![CDATA[移动端适配]]></title>
     <url>%2F783ce8a9.html</url>
     <content type="text"><![CDATA[#rem 适配 获取根元素html标签 用html.getBoundingClientRect().width获取他的视口大小 设置根元素的字体大小为视口大小/16 这样在任何一个设备上1rem的大小都是等比的 (function(){ var html = document.querySelector("html"); var width = html.getBoundingClientRect().width; html.style.fontSize=width/16+"px"; })(); #viewport适配 //获取图片的宽度 var tragetW =640; //获取整个视口的宽度 var width = document.documentElement.clientWidth; //定义一个比例 视口的宽度除以设计图的宽度 var scale = width/tragetW; //动态创建meta标签，使默认的缩放比例为这个比例 var metaNode = document.querySelector("meta[name='viewport']"); metaNode.setAttribute("content","width=device-width,initial-scale="+scale); ###一物理像素适配 (function(w){ //拿到对应设备的像素比 如果不存在则指定为1 var dpr = window.devicePixelRatio||1; var scale = 1/dpr; var rem = document.documentElement.clientWidth*dpr/16; //实现了页面所有元素的缩放 var metaNode = document.querySelector("meta[name='viewport']"); metaNode.setAttribute("content","width=device-width,initial-scale="+scale ); //将布局元素放大回来 var html = document.querySelector("html"); html.style.fontSize=rem+"px"; var styleNode = document.createElement("style"); styleNode.innerHTML="html{font-size:"+rem+"px!important}"; document.head.appendChild(styleNode); w.dpr=dpr; w.scale=scale; w.rem=rem; })(window) #sass适配 css初始化创建一个函数，其中 $px / 46.875&#39;中的数值是根据ui设计图和基于那个型号的手机做的设计图进行换算的 @function rem ( $px ) { @return $px / 46.875 + rem; } 使用的时候这样使用 要注意的是，这样可以不用带单位直接设计图多大尺寸，写进去自动换算成rem尺寸，单位不用带 h3 { font-size: rem(36); }]]></content>
+      <tags>
+        <tag>css</tag>
+        <tag>移动端</tag>
+        <tag>适配</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[highcharts图例控制]]></title>

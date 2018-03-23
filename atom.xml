@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-23T06:31:54.274Z</updated>
+  <updated>2018-03-23T06:33:30.248Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -21,21 +21,25 @@
     <link href="https://yinzhonghao123.github.io/783ce8a9.html"/>
     <id>https://yinzhonghao123.github.io/783ce8a9.html</id>
     <published>2018-03-23T06:21:11.000Z</published>
-    <updated>2018-03-23T06:31:54.274Z</updated>
+    <updated>2018-03-23T06:33:30.248Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt; 
-&lt;p&gt;#rem
-        
-      
+      &lt;p&gt;#rem 适配&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;获取根元素html标签&lt;/li&gt;
+&lt;li&gt;用html.getBoundingClientRect().width获取他的视口大小&lt;/li&gt;
+&lt;li&gt;设置根元素的字体大小为视口大小/16&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;这样在任何一个设备上1rem的大小都是等比的&lt;/p&gt;
     
     </summary>
     
+    
+      <category term="css" scheme="https://yinzhonghao123.github.io/tags/css/"/>
+    
+      <category term="移动端" scheme="https://yinzhonghao123.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+      <category term="适配" scheme="https://yinzhonghao123.github.io/tags/%E9%80%82%E9%85%8D/"/>
     
   </entry>
   
