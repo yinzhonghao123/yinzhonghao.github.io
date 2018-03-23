@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-23T06:33:30.248Z</updated>
+  <updated>2018-03-23T06:35:44.046Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -21,12 +21,11 @@
     <link href="https://yinzhonghao123.github.io/783ce8a9.html"/>
     <id>https://yinzhonghao123.github.io/783ce8a9.html</id>
     <published>2018-03-23T06:21:11.000Z</published>
-    <updated>2018-03-23T06:33:30.248Z</updated>
+    <updated>2018-03-23T06:35:44.046Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;#rem 适配&lt;/p&gt;
-&lt;ul&gt;
+      &lt;h1 id=&quot;rem-适配&quot;&gt;&lt;a href=&quot;#rem-适配&quot; class=&quot;headerlink&quot; title=&quot;rem 适配&quot;&gt;&lt;/a&gt;rem 适配&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;获取根元素html标签&lt;/li&gt;
 &lt;li&gt;用html.getBoundingClientRect().width获取他的视口大小&lt;/li&gt;
 &lt;li&gt;设置根元素的字体大小为视口大小/16&lt;/li&gt;
