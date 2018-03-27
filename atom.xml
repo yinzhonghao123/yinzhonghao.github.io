@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yinzhonghao123.github.io/"/>
-  <updated>2018-03-23T06:35:44.046Z</updated>
+  <updated>2018-03-27T03:29:06.662Z</updated>
   <id>https://yinzhonghao123.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Geolocation</title>
+    <link href="https://yinzhonghao123.github.io/1b5c6a63.html"/>
+    <id>https://yinzhonghao123.github.io/1b5c6a63.html</id>
+    <published>2018-03-27T03:23:42.000Z</published>
+    <updated>2018-03-27T03:29:06.662Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;无意间看见h5新api关于浏览器地理位置定位&lt;br&gt; 所以了解了一下，关于Geolocation在工作上的应用&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://yinzhonghao123.github.io/tags/js/"/>
+    
+      <category term="h5" scheme="https://yinzhonghao123.github.io/tags/h5/"/>
+    
+  </entry>
   
   <entry>
     <title>移动端适配</title>
